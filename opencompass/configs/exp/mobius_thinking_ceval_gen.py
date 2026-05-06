@@ -36,7 +36,7 @@ base_model_specs = [
         tokenizer_path='rwkv_vocab_v20230424',
         strategy='cuda fp16',
         max_seq_len=4096,
-        max_out_len=256,
+        max_out_len=4096,
         batch_size=1,
         run_cfg=dict(num_gpus=1),
     ),
@@ -50,7 +50,7 @@ models = [
         tokenizer_path=spec['tokenizer_path'],
         strategy=spec.get('strategy', 'cuda fp16'),
         max_seq_len=spec.get('max_seq_len', 4096),
-        max_out_len=spec.get('max_out_len', 256),
+        max_out_len=spec.get('max_out_len', 4096),
         batch_size=spec.get('batch_size', 1),
         run_cfg=deepcopy(spec.get('run_cfg', dict(num_gpus=1))),
         meta_template=deepcopy(

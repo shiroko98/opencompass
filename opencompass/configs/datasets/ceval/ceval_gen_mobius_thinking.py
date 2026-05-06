@@ -655,7 +655,7 @@ assert not missing_subjects, f'Missing few-shot examples for: {sorted(missing_su
 def build_user_prompt(subject_cn: str, question: str, options: dict) -> str:
     return (
         f'以下是中国关于{subject_cn}考试的单项选择题。'
-        '请先在<think></think>中给出思考过程，然后只给出最终正确选项的字母，不要输出解释。\n'
+        '请先输出<think>\n你的思考</think>，然后只给出最终正确选项的字母，不要输出解释。\n'
         f'{question}\n'
         f'A. {options["A"]}\n'
         f'B. {options["B"]}\n'
@@ -677,7 +677,10 @@ def build_fewshot_rounds(subject_name: str) -> list:
             ),
             dict(
                 role='BOT',
-                prompt=f'<think>{example["think"]}</think>\n{example["answer"]}',
+                prompt=(
+                    f'<think>\n{example["think"]}</think>\n\n'
+                    f'{example["answer"]}'
+                ),
             ),
         ])
     return rounds
@@ -698,7 +701,7 @@ for _split in ['val']:
         _ch_name = ceval_subject_mapping[_name][1]
         user_prompt = (
             f'以下是中国关于{_ch_name}考试的单项选择题。'
-            '请先在<think></think>中给出充分且有条理的思考过程，'
+            '请先输出<think>\n你的思考</think>，'
             '再单独输出最终正确选项的字母（A/B/C/D）。'
             '不要输出额外解释。\n'
             '{question}\n'
@@ -720,8 +723,8 @@ for _split in ['val']:
                         dict(
                             role='BOT',
                             prompt=(
-                                f'<think>{build_auto_think(_ch_name)}</think>\n'
-                                '{answer}'
+                                f'<think>\n{build_auto_think(_ch_name)}\n'
+                                '</think>\n\n{answer}'
                             ),
                         ),
                     ],
@@ -745,7 +748,7 @@ for _split in ['val']:
             retriever=dict(type=FixKRetriever, fix_id_list=[0, 1, 2, 3]),
             inferencer=dict(
                 type=GenInferencer,
-                max_out_len=256,
+                max_out_len=4096,
                 stopping_criteria=[
                     '<|im_end|>',
                     '<|endoftext|>',
