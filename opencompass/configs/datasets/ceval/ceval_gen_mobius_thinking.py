@@ -655,7 +655,9 @@ assert not missing_subjects, f'Missing few-shot examples for: {sorted(missing_su
 def build_user_prompt(subject_cn: str, question: str, options: dict) -> str:
     return (
         f'以下是中国关于{subject_cn}考试的单项选择题。'
-        '请先输出<think>\n你的思考</think>，然后只给出最终正确选项的字母，不要输出解释。\n'
+        '请先输出<think>\n你的思考</think>。'
+        '思考过程尽量精炼（建议80字以内），并确保输出闭合的</think>标签。'
+        '最后单独一行只输出最终正确选项的字母（A/B/C/D），不要输出解释。\n'
         f'{question}\n'
         f'A. {options["A"]}\n'
         f'B. {options["B"]}\n'
@@ -701,7 +703,8 @@ for _split in ['val']:
         _ch_name = ceval_subject_mapping[_name][1]
         user_prompt = (
             f'以下是中国关于{_ch_name}考试的单项选择题。'
-            '请先输出<think>\n你的思考</think>，'
+            '请先输出<think>\n你的思考</think>。'
+            '思考过程尽量精炼（建议80字以内），并确保输出闭合的</think>标签。'
             '再单独输出最终正确选项的字母（A/B/C/D）。'
             '不要输出额外解释。\n'
             '{question}\n'
@@ -752,9 +755,6 @@ for _split in ['val']:
                 stopping_criteria=[
                     '<|im_end|>',
                     '<|endoftext|>',
-                    '<|im_start|>User:',
-                    '<|im_start|>System:',
-                    '<|im_start|>Assistant:',
                 ],
             ),
         )
