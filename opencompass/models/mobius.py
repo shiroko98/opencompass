@@ -1,6 +1,5 @@
 from typing import Dict, List, Optional, Union
 import os.path as osp
-import re
 import numpy as np
 import torch
 import torch.nn.functional as F
@@ -74,13 +73,13 @@ class Mobius(BaseModel):
         self.logger.info("Mobius (RWKV) model initialized.")
 
     def _normalize_tokenizer_path(self, tokenizer_path: Optional[str]) -> str:
-        # ChatRWKV's PIPELINE special-cases magic tokenizer names like
+        # ChatRWKV's PIPELINE special-cases the magic name
         # `rwkv_vocab_v20230424`. Passing the `.txt` path falls through to
         # `Tokenizer.from_file(...)`, which expects a JSON tokenizer file.
         if tokenizer_path is None:
             return 'rwkv_vocab_v20230424'
         basename = osp.basename(tokenizer_path)
-        if re.fullmatch(r'rwkv_vocab_v\d+\.txt', basename):
+        if basename == 'rwkv_vocab_v20230424.txt':
             return osp.splitext(basename)[0]
         return tokenizer_path
 

@@ -33,7 +33,7 @@ base_model_specs = [
     dict(
         abbr='mobius_thinking_model',
         path='/mnt/lab/Models/pt/Mobius-r6-chat-CHNtuned-12b-16k-v4.2.1.pth',
-        tokenizer_path='/mnt/data/Codes/RWKV/RWKV_tokenizer/rwkv_vocab_v20250609.txt',
+        tokenizer_path='rwkv_vocab_v20230424',
         strategy='cuda fp16',
         max_seq_len=4096,
         max_out_len=256,
