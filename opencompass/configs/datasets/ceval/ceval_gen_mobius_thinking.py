@@ -743,7 +743,11 @@ for _split in ['val']:
                             role='HUMAN',
                             prompt=user_prompt,
                         ),
-                        dict(role='BOT', prompt=''),
+                        dict(
+                            role='BOT',
+                            begin='<|im_start|>Assistant: <think>\n',
+                            prompt='',
+                        ),
                     ],
                 ),
                 ice_token='</E>',
