@@ -151,6 +151,54 @@ def first_option_postprocess(text: str, options: str, cushion=True) -> str:
     return ''
 
 
+@TEXT_POSTPROCESSORS.register_module('think-option')
+def think_option_postprocess(
+    text: str,
+    options: str,
+    think_start_token: str = '<think>',
+    think_end_token: str = '</think>',
+    stop_words: Optional[list] = None,
+) -> str:
+    """Extract the final option for thinking models.
+
+    This first removes reasoning content between think tags, then searches for
+    a multiple-choice option in the remaining answer-only text.
+    """
+
+    cleaned = extract_non_reasoning_content(
+        text,
+        think_start_token=think_start_token,
+        think_end_token=think_end_token,
+    ).strip()
+
+    for stop_word in stop_words or []:
+        stop_pos = cleaned.find(stop_word)
+        if stop_pos != -1:
+            cleaned = cleaned[:stop_pos].strip()
+
+    cleaned = re.sub(r'^\s*(?:Assistant|assistant)\s*:\s*', '', cleaned)
+
+    extracted = first_option_postprocess(cleaned, options, cushion=False)
+    if extracted:
+        return extracted
+
+    patterns = [
+        rf'(?is)(?:最终答案|答案|answer|final answer)\s*[:：]?\s*([{options}])\b',
+        rf'(?is)(?:故选|选项|选择|因此选)\s*([{options}])\b',
+    ]
+    for pattern in patterns:
+        match = re.search(pattern, cleaned)
+        if match:
+            return match.group(1)
+
+    matches = re.findall(
+        rf'(?<![A-Za-z0-9_])([{options}])(?![A-Za-z0-9_])', cleaned)
+    if matches:
+        return matches[-1]
+
+    return ''
+
+
 @TEXT_POSTPROCESSORS.register_module('first-capital-multi')
 def first_capital_postprocess_multi(text: str) -> str:
     match = re.search(r'([A-D]+)', text)

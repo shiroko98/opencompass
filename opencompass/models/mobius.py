@@ -1,6 +1,6 @@
 from typing import Dict, List, Optional, Union
-import os
 import os.path as osp
+import re
 import numpy as np
 import torch
 import torch.nn.functional as F
@@ -27,6 +27,7 @@ class Mobius(BaseModel):
         generation_kwargs: Optional[Dict] = None,
         meta_template: Optional[Dict] = None,
         strategy: str = "cuda fp16",
+        stop_words: Optional[List[str]] = None,
         **kwargs,
     ):
         """
@@ -37,6 +38,7 @@ class Mobius(BaseModel):
             generation_kwargs: sampling args
             meta_template: OpenCompass meta template
             strategy: ChatRWKV rwkv package strategy string
+            stop_words: strings used to truncate generated text
             **kwargs: ignored (for OpenCompass compatibility)
         """
         super().__init__(path=path, max_seq_len=max_seq_len, meta_template=meta_template)
@@ -44,6 +46,7 @@ class Mobius(BaseModel):
         self.logger = get_logger()
         self.max_seq_len = max_seq_len
         self.strategy = strategy
+        self.stop_words = stop_words or []
 
         # ---- load model ----
         self.model = RWKV(model=path, strategy=strategy)
@@ -71,28 +74,48 @@ class Mobius(BaseModel):
         self.logger.info("Mobius (RWKV) model initialized.")
 
     def _normalize_tokenizer_path(self, tokenizer_path: Optional[str]) -> str:
-        # ChatRWKV's PIPELINE special-cases the magic name
+        # ChatRWKV's PIPELINE special-cases magic tokenizer names like
         # `rwkv_vocab_v20230424`. Passing the `.txt` path falls through to
         # `Tokenizer.from_file(...)`, which expects a JSON tokenizer file.
         if tokenizer_path is None:
             return 'rwkv_vocab_v20230424'
         basename = osp.basename(tokenizer_path)
-        if basename == 'rwkv_vocab_v20230424.txt':
-            return 'rwkv_vocab_v20230424'
+        if re.fullmatch(r'rwkv_vocab_v\d+\.txt', basename):
+            return osp.splitext(basename)[0]
         return tokenizer_path
+
+    def _apply_stop_words(self, text: str, stop_words: Optional[List[str]]) -> str:
+        stop_words = [word for word in (stop_words or []) if word]
+        if not stop_words:
+            return text
+
+        stop_positions = [
+            text.find(word) for word in stop_words if text.find(word) != -1
+        ]
+        if not stop_positions:
+            return text
+        return text[:min(stop_positions)]
 
     # =========================
     # Generation (GEN datasets)
     # =========================
-    def generate(self, inputs: List[str], max_out_len: int) -> List[str]:
+    def generate(
+        self,
+        inputs: List[str],
+        max_out_len: int,
+        stopping_criteria: Optional[List[str]] = None,
+    ) -> List[str]:
         results = []
+        effective_stop_words = list(self.stop_words)
+        if stopping_criteria:
+            effective_stop_words.extend(stopping_criteria)
         for prompt in inputs:
             out = self.pipeline.generate(
                 prompt,
                 token_count=max_out_len,
                 args=self.args,
             )
-            results.append(out)
+            results.append(self._apply_stop_words(out, effective_stop_words).strip())
         return results
 
     # =========================
