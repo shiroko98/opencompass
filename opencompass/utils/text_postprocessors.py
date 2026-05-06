@@ -165,11 +165,14 @@ def think_option_postprocess(
     a multiple-choice option in the remaining answer-only text.
     """
 
+    # Prefer answer text after reasoning tags. If model forgets to close
+    # </think>, keep a fallback copy of raw text for robust extraction.
     cleaned = extract_non_reasoning_content(
         text,
         think_start_token=think_start_token,
         think_end_token=think_end_token,
     ).strip()
+    raw_text = text.strip()
 
     for stop_word in stop_words or []:
         stop_pos = cleaned.find(stop_word)
@@ -181,6 +184,12 @@ def think_option_postprocess(
     extracted = first_option_postprocess(cleaned, options, cushion=False)
     if extracted:
         return extracted
+
+    # Handle outputs like "B." / "C。" / "(D)" on the final line.
+    tail_punct_pattern = rf'(?is)(?:^|\n)\s*[\(（]?\s*([{options}])\s*[\)）]?\s*[.。．]*\s*$'
+    match = re.search(tail_punct_pattern, cleaned)
+    if match:
+        return match.group(1)
 
     patterns = [
         rf'(?is)(?:最终答案|答案|answer|final answer)\s*[:：]?\s*([{options}])\b',
@@ -195,6 +204,17 @@ def think_option_postprocess(
         rf'(?<![A-Za-z0-9_])([{options}])(?![A-Za-z0-9_])', cleaned)
     if matches:
         return matches[-1]
+
+    # Fallback for unclosed <think> where all content remains in raw text.
+    raw_cleaned = re.sub(r'^\s*(?:Assistant|assistant)\s*:\s*', '', raw_text)
+    raw_match = re.search(tail_punct_pattern, raw_cleaned)
+    if raw_match:
+        return raw_match.group(1)
+
+    raw_matches = re.findall(
+        rf'(?<![A-Za-z0-9_])([{options}])(?![A-Za-z0-9_])', raw_cleaned)
+    if raw_matches:
+        return raw_matches[-1]
 
     return ''
 
