@@ -1,0 +1,57 @@
+datasets=[
+    dict(abbr='openai_humaneval',
+        eval_cfg=dict(
+            evaluator=dict(
+                type='opencompass.datasets.HumanEvalEvaluator'),
+            k=[
+                1,
+                10,
+                100,
+                ],
+            pred_postprocessor=dict(
+                type='opencompass.datasets.humaneval_postprocess_v2'),
+            pred_role='BOT'),
+        infer_cfg=dict(
+            inferencer=dict(
+                type='opencompass.openicl.icl_inferencer.GenInferencer'),
+            prompt_template=dict(
+                template=dict(
+                    round=[
+                        dict(prompt='Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n{prompt}',
+                            role='HUMAN'),
+                        ]),
+                type='opencompass.openicl.icl_prompt_template.PromptTemplate'),
+            retriever=dict(
+                type='opencompass.openicl.icl_retriever.ZeroRetriever')),
+        path='opencompass/humaneval',
+        reader_cfg=dict(
+            input_columns=[
+                'prompt',
+                ],
+            output_column='task_id',
+            train_split='test'),
+        type='opencompass.datasets.HumanevalDataset'),
+    ]
+models=[
+    dict(abbr='qwen3-32b-humaneval-vllm',
+        batch_size=1,
+        generation_kwargs=dict(
+            stop=[
+                '\n\n\n',
+                ],
+            temperature=0.0,
+            top_p=1.0),
+        max_out_len=1024,
+        max_seq_len=4096,
+        model_kwargs=dict(
+            dtype='bfloat16',
+            gpu_memory_utilization=0.92,
+            max_model_len=4096,
+            tensor_parallel_size=1,
+            trust_remote_code=True),
+        path='/mnt/lab/Models/qwen/Qwen3-32B',
+        run_cfg=dict(
+            num_gpus=1),
+        type='opencompass.models.VLLM'),
+    ]
+work_dir='outputs/default/20260126_085145'

@@ -1,0 +1,62 @@
+datasets=[
+    dict(abbr='mmlu_pro_math',
+        category='math',
+        eval_cfg=dict(
+            evaluator=dict(
+                type='opencompass.openicl.icl_evaluator.AccEvaluator'),
+            pred_postprocessor=dict(
+                answer_pattern='(?im)^\\s*ANSWER\\s*:\\s*([A-P])\\s*$',
+                type='opencompass.utils.text_postprocessors.match_answer_pattern')),
+        infer_cfg=dict(
+            inferencer=dict(
+                type='opencompass.openicl.icl_inferencer.GenInferencer'),
+            prompt_template=dict(
+                template=dict(
+                    round=[
+                        dict(prompt='You are a multiple-choice answer bot. Output only one line: "ANSWER: X".',
+                            role='SYSTEM'),
+                        dict(prompt='Answer the following multiple choice question.\n\nYou MUST respond with exactly ONE line in the following format:\nANSWER: X\n\nWhere X is one of ABCDEFGHIJKLMNOP.\nDo NOT provide any explanation.\nDo NOT output any other text before or after that line.\n\nQuestion:\n{question}\n\nOptions:\n{options_str}',
+                            role='HUMAN'),
+                        ]),
+                type='opencompass.openicl.icl_prompt_template.PromptTemplate'),
+            retriever=dict(
+                type='opencompass.openicl.icl_retriever.ZeroRetriever')),
+        path='opencompass/mmlu_pro',
+        reader_cfg=dict(
+            input_columns=[
+                'question',
+                'cot_content',
+                'options_str',
+                ],
+            output_column='answer',
+            test_split='test',
+            train_split='validation'),
+        type='opencompass.datasets.MMLUProDataset'),
+    ]
+models=[
+    dict(abbr='Qwen3-32B_hf',
+        batch_size=8,
+        generation_kwargs=dict(
+            ),
+        max_out_len=256,
+        max_seq_len=None,
+        model_kwargs=dict(
+            ),
+        pad_token_id=None,
+        path='/mnt/lab/Models/qwen/Qwen3-32B',
+        peft_kwargs=dict(
+            ),
+        peft_path=None,
+        run_cfg=dict(
+            num_gpus=1),
+        stop_words=[
+            ],
+        tokenizer_kwargs=dict(
+            ),
+        tokenizer_path=None,
+        type='opencompass.models.huggingface_above_v4_33.HuggingFacewithChatTemplate'),
+    ]
+summarizer=dict(
+    summary_groups=[
+        ])
+work_dir='eval_results/hf/Qwen3-32B_mmlu_pro_math_debug/20260123_054248'

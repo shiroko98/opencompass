@@ -6,17 +6,29 @@ from opencompass.openicl.icl_evaluator import AccEvaluator
 from opencompass.datasets import MMLUDataset
 from opencompass.utils.text_postprocessors import match_answer_pattern
 
-with read_base():
-    from .mmlu_all_sets import mmlu_all_sets
+# ✅ 小子集：只跑一个
+mmlu_all_sets = [
+    "business_ethics",
+    "moral_disputes",
+    "high_school_psychology",
+    "sociology",
+]
 
-# None of the mmlu dataset in huggingface is correctly parsed, so we use our own dataset reader
-# Please download the dataset from https://people.eecs.berkeley.edu/~hendrycks/data.tar
 
-QUERY_TEMPLATE = """
-Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: $LETTER' (without quotes) where LETTER is one of ABCD. Think step by step before answering.
+QUERY_TEMPLATE = r"""
+Answer the following multiple choice question.
 
+You MUST respond with exactly ONE line in the following format:
+ANSWER: X
+
+Where X is one of ABCD.
+Do NOT provide any explanation.
+Do NOT output any other text before or after that line.
+
+Question:
 {input}
 
+Options:
 A) {A}
 B) {B}
 C) {C}
@@ -26,7 +38,8 @@ D) {D}
 mmlu_reader_cfg = dict(
     input_columns=['input', 'A', 'B', 'C', 'D'],
     output_column='target',
-    train_split='dev')
+    train_split='dev'
+)
 
 mmlu_datasets = []
 for name in mmlu_all_sets:
@@ -34,18 +47,26 @@ for name in mmlu_all_sets:
         prompt_template=dict(
             type=PromptTemplate,
             template=dict(
-                round=[
-                    dict(role='HUMAN', prompt=QUERY_TEMPLATE),
-                ],
+                round=[dict(role='HUMAN', prompt=QUERY_TEMPLATE)],
             ),
         ),
         retriever=dict(type=ZeroRetriever),
-        inferencer=dict(type=GenInferencer),
+        inferencer=dict(
+            type=GenInferencer,
+            gen_kwargs=dict(
+                max_new_tokens=16,
+                temperature=0.0,
+            ),
+        ),
     )
 
     mmlu_eval_cfg = dict(
         evaluator=dict(type=AccEvaluator),
-        pred_postprocessor=dict(type=match_answer_pattern, answer_pattern=r'(?i)ANSWER\s*:\s*([A-D])'))
+        pred_postprocessor=dict(
+            type=match_answer_pattern,
+            answer_pattern=r'(?i)\bANSWER\s*:\s*([A-D])\b'
+        )
+    )
 
     mmlu_datasets.append(
         dict(
@@ -56,4 +77,5 @@ for name in mmlu_all_sets:
             reader_cfg=mmlu_reader_cfg,
             infer_cfg=mmlu_infer_cfg,
             eval_cfg=mmlu_eval_cfg,
-        ))
+        )
+    )

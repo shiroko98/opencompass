@@ -1,0 +1,477 @@
+01/23 09:43:26 - OpenCompass - INFO - Task [qwen3-32b-hf/ceval-computer_network,qwen3-32b-hf/ceval-operating_system,qwen3-32b-hf/ceval-computer_architecture,qwen3-32b-hf/ceval-college_programming,qwen3-32b-hf/ceval-college_physics,qwen3-32b-hf/ceval-college_chemistry,qwen3-32b-hf/ceval-advanced_mathematics,qwen3-32b-hf/ceval-probability_and_statistics,qwen3-32b-hf/ceval-discrete_mathematics,qwen3-32b-hf/ceval-electrical_engineer,qwen3-32b-hf/ceval-metrology_engineer,qwen3-32b-hf/ceval-high_school_mathematics,qwen3-32b-hf/ceval-high_school_physics,qwen3-32b-hf/ceval-high_school_chemistry,qwen3-32b-hf/ceval-high_school_biology,qwen3-32b-hf/ceval-middle_school_mathematics,qwen3-32b-hf/ceval-middle_school_biology,qwen3-32b-hf/ceval-middle_school_physics,qwen3-32b-hf/ceval-middle_school_chemistry,qwen3-32b-hf/ceval-veterinary_medicine,qwen3-32b-hf/ceval-college_economics,qwen3-32b-hf/ceval-business_administration,qwen3-32b-hf/ceval-marxism,qwen3-32b-hf/ceval-mao_zedong_thought,qwen3-32b-hf/ceval-education_science,qwen3-32b-hf/ceval-teacher_qualification,qwen3-32b-hf/ceval-high_school_politics,qwen3-32b-hf/ceval-high_school_geography,qwen3-32b-hf/ceval-middle_school_politics,qwen3-32b-hf/ceval-middle_school_geography,qwen3-32b-hf/ceval-modern_chinese_history,qwen3-32b-hf/ceval-ideological_and_moral_cultivation,qwen3-32b-hf/ceval-logic,qwen3-32b-hf/ceval-law,qwen3-32b-hf/ceval-chinese_language_and_literature,qwen3-32b-hf/ceval-art_studies,qwen3-32b-hf/ceval-professional_tour_guide,qwen3-32b-hf/ceval-legal_professional,qwen3-32b-hf/ceval-high_school_chinese,qwen3-32b-hf/ceval-high_school_history,qwen3-32b-hf/ceval-middle_school_history,qwen3-32b-hf/ceval-civil_servant,qwen3-32b-hf/ceval-sports_science,qwen3-32b-hf/ceval-plant_protection,qwen3-32b-hf/ceval-basic_medicine,qwen3-32b-hf/ceval-clinical_medicine,qwen3-32b-hf/ceval-urban_and_rural_planner,qwen3-32b-hf/ceval-accountant,qwen3-32b-hf/ceval-fire_engineer,qwen3-32b-hf/ceval-environmental_impact_assessment_engineer,qwen3-32b-hf/ceval-tax_accountant,qwen3-32b-hf/ceval-physician]
+/root/miniforge3/envs/open-compass/lib/python3.10/site-packages/jieba/_compat.py:18: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+`torch_dtype` is deprecated! Use `dtype` instead!
+[2026-01-23 09:43:34] INFO modeling.py:987: We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+Loading checkpoint shards:   0%|          | 0/17 [00:00<?, ?it/s]Loading checkpoint shards:   6%|▌         | 1/17 [00:00<00:09,  1.64it/s]Loading checkpoint shards:  12%|█▏        | 2/17 [00:01<00:09,  1.60it/s]Loading checkpoint shards:  18%|█▊        | 3/17 [00:01<00:08,  1.61it/s]Loading checkpoint shards:  24%|██▎       | 4/17 [00:02<00:07,  1.63it/s]Loading checkpoint shards:  29%|██▉       | 5/17 [00:03<00:07,  1.62it/s]Loading checkpoint shards:  35%|███▌      | 6/17 [00:03<00:06,  1.62it/s]Loading checkpoint shards:  41%|████      | 7/17 [00:04<00:06,  1.65it/s]Loading checkpoint shards:  47%|████▋     | 8/17 [00:04<00:05,  1.68it/s]Loading checkpoint shards:  53%|█████▎    | 9/17 [00:05<00:04,  1.67it/s]Loading checkpoint shards:  59%|█████▉    | 10/17 [00:06<00:04,  1.70it/s]Loading checkpoint shards:  65%|██████▍   | 11/17 [00:06<00:03,  1.70it/s]Loading checkpoint shards:  71%|███████   | 12/17 [00:07<00:02,  1.71it/s]Loading checkpoint shards:  76%|███████▋  | 13/17 [00:07<00:02,  1.73it/s]Loading checkpoint shards:  82%|████████▏ | 14/17 [00:08<00:01,  1.74it/s]Loading checkpoint shards:  88%|████████▊ | 15/17 [00:08<00:01,  1.74it/s]Loading checkpoint shards:  94%|█████████▍| 16/17 [00:09<00:00,  1.73it/s]Loading checkpoint shards: 100%|██████████| 17/17 [00:09<00:00,  1.83it/s]Loading checkpoint shards: 100%|██████████| 17/17 [00:09<00:00,  1.71it/s]
+01/23 09:43:44 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 1/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1300.56 examples/s]
+Map:   0%|          | 0/19 [00:00<?, ? examples/s]Map: 100%|██████████| 19/19 [00:00<00:00, 4836.55 examples/s]
+Map:   0%|          | 0/171 [00:00<?, ? examples/s]Map: 100%|██████████| 171/171 [00:00<00:00, 12318.39 examples/s]
+01/23 09:43:45 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-computer_network]
+  0%|          | 0/19 [00:00<?, ?it/s]100%|██████████| 19/19 [00:00<00:00, 180706.98it/s]
+[2026-01-23 09:43:45,085] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 09:43:45,086] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/5 [00:00<?, ?it/s]The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+ 20%|██        | 1/5 [00:17<01:09, 17.38s/it] 40%|████      | 2/5 [00:33<00:50, 16.73s/it] 60%|██████    | 3/5 [00:49<00:33, 16.50s/it] 80%|████████  | 4/5 [01:06<00:16, 16.39s/it]100%|██████████| 5/5 [01:18<00:00, 14.87s/it]100%|██████████| 5/5 [01:18<00:00, 15.66s/it]
+01/23 09:45:03 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 2/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1599.90 examples/s]
+Map:   0%|          | 0/19 [00:00<?, ? examples/s]Map: 100%|██████████| 19/19 [00:00<00:00, 4872.33 examples/s]
+Map:   0%|          | 0/179 [00:00<?, ? examples/s]Map: 100%|██████████| 179/179 [00:00<00:00, 12768.16 examples/s]
+01/23 09:45:03 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-operating_system]
+  0%|          | 0/19 [00:00<?, ?it/s]100%|██████████| 19/19 [00:00<00:00, 758969.30it/s]
+[2026-01-23 09:45:03,452] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 09:45:03,452] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/5 [00:00<?, ?it/s] 20%|██        | 1/5 [00:15<01:03, 15.87s/it] 40%|████      | 2/5 [00:31<00:47, 15.93s/it] 60%|██████    | 3/5 [00:47<00:31, 15.93s/it] 80%|████████  | 4/5 [01:03<00:15, 15.93s/it]100%|██████████| 5/5 [01:15<00:00, 14.52s/it]100%|██████████| 5/5 [01:15<00:00, 15.14s/it]
+01/23 09:46:19 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 3/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1653.25 examples/s]
+Map:   0%|          | 0/21 [00:00<?, ? examples/s]Map: 100%|██████████| 21/21 [00:00<00:00, 5236.33 examples/s]
+Map:   0%|          | 0/193 [00:00<?, ? examples/s]Map: 100%|██████████| 193/193 [00:00<00:00, 13061.94 examples/s]
+01/23 09:46:19 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-computer_architecture]
+  0%|          | 0/21 [00:00<?, ?it/s]100%|██████████| 21/21 [00:00<00:00, 793516.97it/s]
+[2026-01-23 09:46:19,255] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 09:46:19,255] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/6 [00:00<?, ?it/s] 17%|█▋        | 1/6 [00:16<01:21, 16.36s/it] 33%|███▎      | 2/6 [00:32<01:05, 16.35s/it] 50%|█████     | 3/6 [00:50<00:50, 16.83s/it] 67%|██████▋   | 4/6 [01:06<00:33, 16.65s/it] 83%|████████▎ | 5/6 [01:22<00:16, 16.56s/it]100%|██████████| 6/6 [01:26<00:00, 12.31s/it]100%|██████████| 6/6 [01:26<00:00, 14.49s/it]
+01/23 09:47:46 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 4/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1605.91 examples/s]
+Map:   0%|          | 0/37 [00:00<?, ? examples/s]Map: 100%|██████████| 37/37 [00:00<00:00, 7504.32 examples/s]
+Map:   0%|          | 0/342 [00:00<?, ? examples/s]Map: 100%|██████████| 342/342 [00:00<00:00, 14155.68 examples/s]
+01/23 09:47:46 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-college_programming]
+  0%|          | 0/37 [00:00<?, ?it/s]100%|██████████| 37/37 [00:00<00:00, 1251526.19it/s]
+[2026-01-23 09:47:46,331] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 09:47:46,331] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:16<02:27, 16.34s/it] 20%|██        | 2/10 [00:32<02:10, 16.27s/it] 30%|███       | 3/10 [00:49<01:54, 16.40s/it] 40%|████      | 4/10 [01:05<01:38, 16.39s/it] 50%|█████     | 5/10 [01:21<01:21, 16.35s/it] 60%|██████    | 6/10 [01:38<01:05, 16.44s/it] 70%|███████   | 7/10 [01:54<00:49, 16.42s/it] 80%|████████  | 8/10 [02:11<00:32, 16.44s/it] 90%|█████████ | 9/10 [02:27<00:16, 16.45s/it]100%|██████████| 10/10 [02:31<00:00, 12.63s/it]100%|██████████| 10/10 [02:31<00:00, 15.18s/it]
+01/23 09:50:18 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 5/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1603.57 examples/s]
+Map:   0%|          | 0/19 [00:00<?, ? examples/s]Map: 100%|██████████| 19/19 [00:00<00:00, 4892.97 examples/s]
+Map:   0%|          | 0/176 [00:00<?, ? examples/s]Map: 100%|██████████| 176/176 [00:00<00:00, 13169.63 examples/s]
+01/23 09:50:18 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-college_physics]
+  0%|          | 0/19 [00:00<?, ?it/s]100%|██████████| 19/19 [00:00<00:00, 758969.30it/s]
+[2026-01-23 09:50:18,217] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 09:50:18,217] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/5 [00:00<?, ?it/s] 20%|██        | 1/5 [00:16<01:06, 16.58s/it] 40%|████      | 2/5 [00:33<00:49, 16.57s/it] 60%|██████    | 3/5 [00:49<00:33, 16.59s/it] 80%|████████  | 4/5 [01:06<00:16, 16.59s/it]100%|██████████| 5/5 [01:18<00:00, 15.09s/it]100%|██████████| 5/5 [01:18<00:00, 15.75s/it]
+01/23 09:51:36 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 6/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1680.28 examples/s]
+Map:   0%|          | 0/24 [00:00<?, ? examples/s]Map: 100%|██████████| 24/24 [00:00<00:00, 5703.95 examples/s]
+Map:   0%|          | 0/224 [00:00<?, ? examples/s]Map: 100%|██████████| 224/224 [00:00<00:00, 13071.82 examples/s]
+01/23 09:51:37 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-college_chemistry]
+  0%|          | 0/24 [00:00<?, ?it/s]100%|██████████| 24/24 [00:00<00:00, 818400.78it/s]
+[2026-01-23 09:51:37,088] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 09:51:37,088] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/6 [00:00<?, ?it/s] 17%|█▋        | 1/6 [00:16<01:21, 16.39s/it] 33%|███▎      | 2/6 [00:32<01:05, 16.33s/it] 50%|█████     | 3/6 [00:49<00:49, 16.39s/it] 67%|██████▋   | 4/6 [01:05<00:32, 16.37s/it] 83%|████████▎ | 5/6 [01:21<00:16, 16.37s/it]100%|██████████| 6/6 [01:38<00:00, 16.39s/it]100%|██████████| 6/6 [01:38<00:00, 16.38s/it]
+01/23 09:53:15 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 7/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1535.14 examples/s]
+Map:   0%|          | 0/19 [00:00<?, ? examples/s]Map: 100%|██████████| 19/19 [00:00<00:00, 4724.72 examples/s]
+Map:   0%|          | 0/173 [00:00<?, ? examples/s]Map: 100%|██████████| 173/173 [00:00<00:00, 12672.50 examples/s]
+01/23 09:53:15 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-advanced_mathematics]
+  0%|          | 0/19 [00:00<?, ?it/s]100%|██████████| 19/19 [00:00<00:00, 699050.67it/s]
+[2026-01-23 09:53:15,456] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 09:53:15,456] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/5 [00:00<?, ?it/s] 20%|██        | 1/5 [00:16<01:07, 16.98s/it] 40%|████      | 2/5 [00:33<00:50, 16.96s/it] 60%|██████    | 3/5 [00:50<00:33, 16.93s/it] 80%|████████  | 4/5 [01:07<00:16, 16.93s/it]100%|██████████| 5/5 [01:20<00:00, 15.43s/it]100%|██████████| 5/5 [01:20<00:00, 16.11s/it]
+01/23 09:54:35 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 8/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1073.81 examples/s]
+Map:   0%|          | 0/18 [00:00<?, ? examples/s]Map: 100%|██████████| 18/18 [00:00<00:00, 2857.26 examples/s]
+Map:   0%|          | 0/166 [00:00<?, ? examples/s]Map: 100%|██████████| 166/166 [00:00<00:00, 9838.41 examples/s]
+01/23 09:54:36 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-probability_and_statistics]
+  0%|          | 0/18 [00:00<?, ?it/s]100%|██████████| 18/18 [00:00<00:00, 686340.65it/s]
+[2026-01-23 09:54:36,100] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 09:54:36,101] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/5 [00:00<?, ?it/s] 20%|██        | 1/5 [00:17<01:08, 17.06s/it] 40%|████      | 2/5 [00:34<00:51, 17.17s/it] 60%|██████    | 3/5 [00:51<00:34, 17.10s/it] 80%|████████  | 4/5 [01:08<00:17, 17.16s/it]100%|██████████| 5/5 [01:17<00:00, 14.20s/it]100%|██████████| 5/5 [01:17<00:00, 15.51s/it]
+01/23 09:55:53 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 9/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1578.35 examples/s]
+Map:   0%|          | 0/16 [00:00<?, ? examples/s]Map: 100%|██████████| 16/16 [00:00<00:00, 4902.75 examples/s]
+Map:   0%|          | 0/153 [00:00<?, ? examples/s]Map: 100%|██████████| 153/153 [00:00<00:00, 12433.23 examples/s]
+01/23 09:55:53 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-discrete_mathematics]
+  0%|          | 0/16 [00:00<?, ?it/s]100%|██████████| 16/16 [00:00<00:00, 627185.64it/s]
+[2026-01-23 09:55:53,713] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 09:55:53,714] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:16<00:49, 16.56s/it] 50%|█████     | 2/4 [00:33<00:33, 16.55s/it] 75%|███████▌  | 3/4 [00:49<00:16, 16.56s/it]100%|██████████| 4/4 [01:06<00:00, 16.55s/it]100%|██████████| 4/4 [01:06<00:00, 16.55s/it]
+01/23 09:56:59 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 10/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1426.73 examples/s]
+Map:   0%|          | 0/37 [00:00<?, ? examples/s]Map: 100%|██████████| 37/37 [00:00<00:00, 7275.63 examples/s]
+Map:   0%|          | 0/339 [00:00<?, ? examples/s]Map: 100%|██████████| 339/339 [00:00<00:00, 13893.58 examples/s]
+01/23 09:57:00 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-electrical_engineer]
+  0%|          | 0/37 [00:00<?, ?it/s]100%|██████████| 37/37 [00:00<00:00, 1092882.03it/s]
+[2026-01-23 09:57:00,073] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 09:57:00,073] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:16<02:31, 16.87s/it] 20%|██        | 2/10 [00:33<02:12, 16.56s/it] 30%|███       | 3/10 [00:49<01:56, 16.61s/it] 40%|████      | 4/10 [01:06<01:40, 16.72s/it] 50%|█████     | 5/10 [01:23<01:23, 16.80s/it] 60%|██████    | 6/10 [01:40<01:07, 16.85s/it] 70%|███████   | 7/10 [01:57<00:50, 16.70s/it] 80%|████████  | 8/10 [02:13<00:33, 16.60s/it] 90%|█████████ | 9/10 [02:30<00:16, 16.60s/it]100%|██████████| 10/10 [02:34<00:00, 12.73s/it]100%|██████████| 10/10 [02:34<00:00, 15.41s/it]
+01/23 09:59:34 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 11/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1664.27 examples/s]
+Map:   0%|          | 0/24 [00:00<?, ? examples/s]Map: 100%|██████████| 24/24 [00:00<00:00, 5942.34 examples/s]
+Map:   0%|          | 0/219 [00:00<?, ? examples/s]Map: 100%|██████████| 219/219 [00:00<00:00, 13475.63 examples/s]
+01/23 09:59:34 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-metrology_engineer]
+  0%|          | 0/24 [00:00<?, ?it/s]100%|██████████| 24/24 [00:00<00:00, 883011.37it/s]
+[2026-01-23 09:59:34,281] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 09:59:34,282] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/6 [00:00<?, ?it/s] 17%|█▋        | 1/6 [00:16<01:23, 16.67s/it] 33%|███▎      | 2/6 [00:33<01:07, 16.76s/it] 50%|█████     | 3/6 [00:49<00:49, 16.64s/it] 67%|██████▋   | 4/6 [01:06<00:33, 16.50s/it] 83%|████████▎ | 5/6 [01:23<00:16, 16.58s/it]100%|██████████| 6/6 [01:39<00:00, 16.63s/it]100%|██████████| 6/6 [01:39<00:00, 16.62s/it]
+01/23 10:01:14 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 12/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1350.47 examples/s]
+Map:   0%|          | 0/18 [00:00<?, ? examples/s]Map: 100%|██████████| 18/18 [00:00<00:00, 4704.19 examples/s]
+Map:   0%|          | 0/166 [00:00<?, ? examples/s]Map: 100%|██████████| 166/166 [00:00<00:00, 12660.55 examples/s]
+01/23 10:01:14 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-high_school_mathematics]
+  0%|          | 0/18 [00:00<?, ?it/s]100%|██████████| 18/18 [00:00<00:00, 686340.65it/s]
+[2026-01-23 10:01:14,136] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 10:01:14,136] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/5 [00:00<?, ?it/s] 20%|██        | 1/5 [00:16<01:07, 16.90s/it] 40%|████      | 2/5 [00:33<00:50, 16.93s/it] 60%|██████    | 3/5 [00:51<00:34, 17.08s/it] 80%|████████  | 4/5 [01:08<00:17, 17.08s/it]100%|██████████| 5/5 [01:17<00:00, 14.13s/it]100%|██████████| 5/5 [01:17<00:00, 15.42s/it]
+01/23 10:02:31 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 13/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1710.56 examples/s]
+Map:   0%|          | 0/19 [00:00<?, ? examples/s]Map: 100%|██████████| 19/19 [00:00<00:00, 4951.34 examples/s]
+Map:   0%|          | 0/175 [00:00<?, ? examples/s]Map: 100%|██████████| 175/175 [00:00<00:00, 12941.50 examples/s]
+01/23 10:02:31 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-high_school_physics]
+  0%|          | 0/19 [00:00<?, ?it/s]100%|██████████| 19/19 [00:00<00:00, 766267.08it/s]
+[2026-01-23 10:02:31,325] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 10:02:31,326] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/5 [00:00<?, ?it/s] 20%|██        | 1/5 [00:16<01:06, 16.53s/it] 40%|████      | 2/5 [00:33<00:50, 16.71s/it] 60%|██████    | 3/5 [00:50<00:33, 16.78s/it] 80%|████████  | 4/5 [01:06<00:16, 16.68s/it]100%|██████████| 5/5 [01:19<00:00, 15.13s/it]100%|██████████| 5/5 [01:19<00:00, 15.83s/it]
+01/23 10:03:50 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 14/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1567.85 examples/s]
+Map:   0%|          | 0/19 [00:00<?, ? examples/s]Map: 100%|██████████| 19/19 [00:00<00:00, 4879.19 examples/s]
+Map:   0%|          | 0/172 [00:00<?, ? examples/s]Map: 100%|██████████| 172/172 [00:00<00:00, 12965.39 examples/s]
+01/23 10:03:50 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-high_school_chemistry]
+  0%|          | 0/19 [00:00<?, ?it/s]100%|██████████| 19/19 [00:00<00:00, 717943.93it/s]
+[2026-01-23 10:03:50,559] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 10:03:50,559] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/5 [00:00<?, ?it/s] 20%|██        | 1/5 [00:17<01:08, 17.05s/it] 40%|████      | 2/5 [00:33<00:50, 16.84s/it] 60%|██████    | 3/5 [00:50<00:33, 16.65s/it] 80%|████████  | 4/5 [01:06<00:16, 16.54s/it]100%|██████████| 5/5 [01:18<00:00, 15.02s/it]100%|██████████| 5/5 [01:18<00:00, 15.77s/it]
+01/23 10:05:09 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 15/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1549.89 examples/s]
+Map:   0%|          | 0/19 [00:00<?, ? examples/s]Map: 100%|██████████| 19/19 [00:00<00:00, 4868.16 examples/s]
+Map:   0%|          | 0/175 [00:00<?, ? examples/s]Map: 100%|██████████| 175/175 [00:00<00:00, 12929.65 examples/s]
+01/23 10:05:09 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-high_school_biology]
+  0%|          | 0/19 [00:00<?, ?it/s]100%|██████████| 19/19 [00:00<00:00, 744782.95it/s]
+[2026-01-23 10:05:09,563] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 10:05:09,563] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/5 [00:00<?, ?it/s] 20%|██        | 1/5 [00:16<01:06, 16.55s/it] 40%|████      | 2/5 [00:33<00:49, 16.52s/it] 60%|██████    | 3/5 [00:49<00:32, 16.48s/it] 80%|████████  | 4/5 [01:05<00:16, 16.48s/it]100%|██████████| 5/5 [01:18<00:00, 15.09s/it]100%|██████████| 5/5 [01:18<00:00, 15.71s/it]
+01/23 10:06:28 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 16/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1665.33 examples/s]
+Map:   0%|          | 0/19 [00:00<?, ? examples/s]Map: 100%|██████████| 19/19 [00:00<00:00, 4902.60 examples/s]
+Map:   0%|          | 0/177 [00:00<?, ? examples/s]Map: 100%|██████████| 177/177 [00:00<00:00, 12716.98 examples/s]
+01/23 10:06:28 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-middle_school_mathematics]
+  0%|          | 0/19 [00:00<?, ?it/s]100%|██████████| 19/19 [00:00<00:00, 737886.81it/s]
+[2026-01-23 10:06:28,226] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 10:06:28,226] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/5 [00:00<?, ?it/s] 20%|██        | 1/5 [00:16<01:06, 16.68s/it] 40%|████      | 2/5 [00:33<00:50, 16.69s/it] 60%|██████    | 3/5 [00:50<00:33, 16.74s/it] 80%|████████  | 4/5 [01:07<00:16, 16.80s/it]100%|██████████| 5/5 [01:19<00:00, 15.31s/it]100%|██████████| 5/5 [01:19<00:00, 15.95s/it]
+01/23 10:07:47 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 17/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1583.59 examples/s]
+Map:   0%|          | 0/21 [00:00<?, ? examples/s]Map: 100%|██████████| 21/21 [00:00<00:00, 5309.25 examples/s]
+Map:   0%|          | 0/192 [00:00<?, ? examples/s]Map: 100%|██████████| 192/192 [00:00<00:00, 13319.21 examples/s]
+01/23 10:07:48 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-middle_school_biology]
+  0%|          | 0/21 [00:00<?, ?it/s]100%|██████████| 21/21 [00:00<00:00, 210718.62it/s]
+[2026-01-23 10:07:48,072] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 10:07:48,072] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/6 [00:00<?, ?it/s] 17%|█▋        | 1/6 [00:16<01:24, 16.82s/it] 33%|███▎      | 2/6 [00:33<01:06, 16.61s/it] 50%|█████     | 3/6 [00:49<00:49, 16.52s/it] 67%|██████▋   | 4/6 [01:06<00:33, 16.53s/it] 83%|████████▎ | 5/6 [01:22<00:16, 16.43s/it]100%|██████████| 6/6 [01:26<00:00, 12.26s/it]100%|██████████| 6/6 [01:26<00:00, 14.44s/it]
+01/23 10:09:14 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 18/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1557.02 examples/s]
+Map:   0%|          | 0/19 [00:00<?, ? examples/s]Map: 100%|██████████| 19/19 [00:00<00:00, 4764.26 examples/s]
+Map:   0%|          | 0/178 [00:00<?, ? examples/s]Map: 100%|██████████| 178/178 [00:00<00:00, 12182.80 examples/s]
+01/23 10:09:14 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-middle_school_physics]
+  0%|          | 0/19 [00:00<?, ?it/s]100%|██████████| 19/19 [00:00<00:00, 686998.07it/s]
+[2026-01-23 10:09:14,814] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 10:09:14,814] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/5 [00:00<?, ?it/s] 20%|██        | 1/5 [00:16<01:05, 16.40s/it] 40%|████      | 2/5 [00:32<00:49, 16.40s/it] 60%|██████    | 3/5 [00:49<00:33, 16.51s/it] 80%|████████  | 4/5 [01:06<00:16, 16.60s/it]100%|██████████| 5/5 [01:18<00:00, 15.15s/it]100%|██████████| 5/5 [01:18<00:00, 15.75s/it]
+01/23 10:10:33 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 19/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1649.48 examples/s]
+Map:   0%|          | 0/20 [00:00<?, ? examples/s]Map: 100%|██████████| 20/20 [00:00<00:00, 5050.03 examples/s]
+Map:   0%|          | 0/185 [00:00<?, ? examples/s]Map: 100%|██████████| 185/185 [00:00<00:00, 12804.82 examples/s]
+01/23 10:10:33 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-middle_school_chemistry]
+  0%|          | 0/20 [00:00<?, ?it/s]100%|██████████| 20/20 [00:00<00:00, 704925.04it/s]
+[2026-01-23 10:10:33,650] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 10:10:33,650] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/5 [00:00<?, ?it/s] 20%|██        | 1/5 [00:16<01:07, 16.77s/it] 40%|████      | 2/5 [00:33<00:50, 16.67s/it] 60%|██████    | 3/5 [00:50<00:33, 16.78s/it] 80%|████████  | 4/5 [01:06<00:16, 16.67s/it]100%|██████████| 5/5 [01:23<00:00, 16.63s/it]100%|██████████| 5/5 [01:23<00:00, 16.67s/it]
+01/23 10:11:56 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 20/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1569.37 examples/s]
+Map:   0%|          | 0/23 [00:00<?, ? examples/s]Map: 100%|██████████| 23/23 [00:00<00:00, 5697.44 examples/s]
+Map:   0%|          | 0/210 [00:00<?, ? examples/s]Map: 100%|██████████| 210/210 [00:00<00:00, 13191.61 examples/s]
+01/23 10:11:57 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-veterinary_medicine]
+  0%|          | 0/23 [00:00<?, ?it/s]100%|██████████| 23/23 [00:00<00:00, 838860.80it/s]
+[2026-01-23 10:11:57,078] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 10:11:57,078] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/6 [00:00<?, ?it/s] 17%|█▋        | 1/6 [00:16<01:21, 16.26s/it] 33%|███▎      | 2/6 [00:32<01:04, 16.21s/it] 50%|█████     | 3/6 [00:48<00:48, 16.28s/it] 67%|██████▋   | 4/6 [01:05<00:32, 16.44s/it] 83%|████████▎ | 5/6 [01:21<00:16, 16.32s/it]100%|██████████| 6/6 [01:33<00:00, 14.88s/it]100%|██████████| 6/6 [01:33<00:00, 15.61s/it]
+01/23 10:13:30 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 21/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1696.31 examples/s]
+Map:   0%|          | 0/55 [00:00<?, ? examples/s]Map: 100%|██████████| 55/55 [00:00<00:00, 9136.83 examples/s]
+Map:   0%|          | 0/497 [00:00<?, ? examples/s]Map: 100%|██████████| 497/497 [00:00<00:00, 14732.35 examples/s]
+01/23 10:13:30 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-college_economics]
+  0%|          | 0/55 [00:00<?, ?it/s]100%|██████████| 55/55 [00:00<00:00, 1590942.90it/s]
+[2026-01-23 10:13:30,904] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 10:13:30,904] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/14 [00:00<?, ?it/s]  7%|▋         | 1/14 [00:16<03:31, 16.24s/it] 14%|█▍        | 2/14 [00:32<03:17, 16.43s/it] 21%|██▏       | 3/14 [00:49<03:00, 16.39s/it] 29%|██▊       | 4/14 [01:05<02:44, 16.42s/it] 36%|███▌      | 5/14 [01:21<02:27, 16.37s/it] 43%|████▎     | 6/14 [01:38<02:11, 16.40s/it] 50%|█████     | 7/14 [01:54<01:54, 16.36s/it] 57%|█████▋    | 8/14 [02:10<01:37, 16.33s/it] 64%|██████▍   | 9/14 [02:27<01:21, 16.31s/it] 71%|███████▏  | 10/14 [02:43<01:05, 16.35s/it] 79%|███████▊  | 11/14 [03:00<00:49, 16.36s/it] 86%|████████▌ | 12/14 [03:16<00:32, 16.33s/it] 93%|█████████▎| 13/14 [03:32<00:16, 16.31s/it]100%|██████████| 14/14 [03:44<00:00, 15.09s/it]100%|██████████| 14/14 [03:44<00:00, 16.06s/it]
+01/23 10:17:15 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 22/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1562.36 examples/s]
+Map:   0%|          | 0/33 [00:00<?, ? examples/s]Map: 100%|██████████| 33/33 [00:00<00:00, 6839.55 examples/s]
+Map:   0%|          | 0/301 [00:00<?, ? examples/s]Map: 100%|██████████| 301/301 [00:00<00:00, 14081.60 examples/s]
+01/23 10:17:15 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-business_administration]
+  0%|          | 0/33 [00:00<?, ?it/s]100%|██████████| 33/33 [00:00<00:00, 1125301.07it/s]
+[2026-01-23 10:17:15,837] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 10:17:15,837] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/9 [00:00<?, ?it/s] 11%|█         | 1/9 [00:16<02:11, 16.48s/it] 22%|██▏       | 2/9 [00:33<01:55, 16.57s/it] 33%|███▎      | 3/9 [00:49<01:39, 16.61s/it] 44%|████▍     | 4/9 [01:06<01:22, 16.52s/it] 56%|█████▌    | 5/9 [01:22<01:05, 16.43s/it] 67%|██████▋   | 6/9 [01:38<00:49, 16.40s/it] 78%|███████▊  | 7/9 [01:55<00:32, 16.42s/it] 89%|████████▉ | 8/9 [02:11<00:16, 16.41s/it]100%|██████████| 9/9 [02:15<00:00, 12.54s/it]100%|██████████| 9/9 [02:15<00:00, 15.07s/it]
+01/23 10:19:31 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 23/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 965.23 examples/s]
+Map:   0%|          | 0/19 [00:00<?, ? examples/s]Map: 100%|██████████| 19/19 [00:00<00:00, 2916.98 examples/s]
+Map:   0%|          | 0/179 [00:00<?, ? examples/s]Map: 100%|██████████| 179/179 [00:00<00:00, 7031.49 examples/s]
+01/23 10:19:31 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-marxism]
+  0%|          | 0/19 [00:00<?, ?it/s]100%|██████████| 19/19 [00:00<00:00, 445205.45it/s]
+[2026-01-23 10:19:31,640] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 10:19:31,640] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/5 [00:00<?, ?it/s] 20%|██        | 1/5 [00:16<01:04, 16.20s/it] 40%|████      | 2/5 [00:32<00:48, 16.18s/it] 60%|██████    | 3/5 [00:48<00:32, 16.17s/it] 80%|████████  | 4/5 [01:04<00:16, 16.18s/it]100%|██████████| 5/5 [01:16<00:00, 14.77s/it]100%|██████████| 5/5 [01:16<00:00, 15.40s/it]
+01/23 10:20:48 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 24/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1447.41 examples/s]
+Map:   0%|          | 0/24 [00:00<?, ? examples/s]Map: 100%|██████████| 24/24 [00:00<00:00, 5864.11 examples/s]
+Map:   0%|          | 0/219 [00:00<?, ? examples/s]Map: 100%|██████████| 219/219 [00:00<00:00, 13275.42 examples/s]
+01/23 10:20:48 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-mao_zedong_thought]
+  0%|          | 0/24 [00:00<?, ?it/s]100%|██████████| 24/24 [00:00<00:00, 875333.01it/s]
+[2026-01-23 10:20:48,731] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 10:20:48,732] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/6 [00:00<?, ?it/s] 17%|█▋        | 1/6 [00:16<01:23, 16.75s/it] 33%|███▎      | 2/6 [00:33<01:05, 16.48s/it] 50%|█████     | 3/6 [00:49<00:49, 16.39s/it] 67%|██████▋   | 4/6 [01:05<00:32, 16.34s/it] 83%|████████▎ | 5/6 [01:21<00:16, 16.37s/it]100%|██████████| 6/6 [01:38<00:00, 16.38s/it]100%|██████████| 6/6 [01:38<00:00, 16.40s/it]
+01/23 10:22:27 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 25/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1327.31 examples/s]
+Map:   0%|          | 0/29 [00:00<?, ? examples/s]Map: 100%|██████████| 29/29 [00:00<00:00, 6713.11 examples/s]
+Map:   0%|          | 0/270 [00:00<?, ? examples/s]Map: 100%|██████████| 270/270 [00:00<00:00, 13803.61 examples/s]
+01/23 10:22:27 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-education_science]
+  0%|          | 0/29 [00:00<?, ?it/s]100%|██████████| 29/29 [00:00<00:00, 973078.53it/s]
+[2026-01-23 10:22:27,260] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 10:22:27,260] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:16<01:55, 16.44s/it] 25%|██▌       | 2/8 [00:32<01:37, 16.31s/it] 38%|███▊      | 3/8 [00:48<01:21, 16.29s/it] 50%|█████     | 4/8 [01:05<01:05, 16.26s/it] 62%|██████▎   | 5/8 [01:21<00:48, 16.23s/it] 75%|███████▌  | 6/8 [01:37<00:32, 16.23s/it] 88%|████████▊ | 7/8 [01:53<00:16, 16.27s/it]100%|██████████| 8/8 [01:57<00:00, 12.38s/it]100%|██████████| 8/8 [01:57<00:00, 14.74s/it]
+01/23 10:24:25 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 26/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1501.50 examples/s]
+Map:   0%|          | 0/44 [00:00<?, ? examples/s]Map: 100%|██████████| 44/44 [00:00<00:00, 8225.23 examples/s]
+Map:   0%|          | 0/399 [00:00<?, ? examples/s]Map: 100%|██████████| 399/399 [00:00<00:00, 14470.37 examples/s]
+01/23 10:24:25 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-teacher_qualification]
+  0%|          | 0/44 [00:00<?, ?it/s]100%|██████████| 44/44 [00:00<00:00, 1377234.15it/s]
+[2026-01-23 10:24:25,386] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 10:24:25,387] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/11 [00:00<?, ?it/s]  9%|▉         | 1/11 [00:16<02:44, 16.44s/it] 18%|█▊        | 2/11 [00:32<02:27, 16.43s/it] 27%|██▋       | 3/11 [00:49<02:10, 16.34s/it] 36%|███▋      | 4/11 [01:05<01:55, 16.48s/it] 45%|████▌     | 5/11 [01:22<01:38, 16.48s/it] 55%|█████▍    | 6/11 [01:38<01:22, 16.42s/it] 64%|██████▎   | 7/11 [01:54<01:05, 16.39s/it] 73%|███████▎  | 8/11 [02:11<00:49, 16.35s/it] 82%|████████▏ | 9/11 [02:27<00:32, 16.34s/it] 91%|█████████ | 10/11 [02:44<00:16, 16.41s/it]100%|██████████| 11/11 [03:00<00:00, 16.48s/it]100%|██████████| 11/11 [03:00<00:00, 16.43s/it]
+01/23 10:27:26 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 27/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1503.12 examples/s]
+Map:   0%|          | 0/19 [00:00<?, ? examples/s]Map: 100%|██████████| 19/19 [00:00<00:00, 4800.13 examples/s]
+Map:   0%|          | 0/176 [00:00<?, ? examples/s]Map: 100%|██████████| 176/176 [00:00<00:00, 12989.12 examples/s]
+01/23 10:27:26 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-high_school_politics]
+  0%|          | 0/19 [00:00<?, ?it/s]100%|██████████| 19/19 [00:00<00:00, 686998.07it/s]
+[2026-01-23 10:27:26,181] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 10:27:26,181] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/5 [00:00<?, ?it/s] 20%|██        | 1/5 [00:16<01:07, 16.96s/it] 40%|████      | 2/5 [00:34<00:51, 17.04s/it] 60%|██████    | 3/5 [00:51<00:34, 17.06s/it] 80%|████████  | 4/5 [01:08<00:17, 17.04s/it]100%|██████████| 5/5 [01:20<00:00, 15.45s/it]100%|██████████| 5/5 [01:20<00:00, 16.16s/it]
+01/23 10:28:46 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 28/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1652.47 examples/s]
+Map:   0%|          | 0/19 [00:00<?, ? examples/s]Map: 100%|██████████| 19/19 [00:00<00:00, 4846.84 examples/s]
+Map:   0%|          | 0/178 [00:00<?, ? examples/s]Map: 100%|██████████| 178/178 [00:00<00:00, 12754.52 examples/s]
+01/23 10:28:47 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-high_school_geography]
+  0%|          | 0/19 [00:00<?, ?it/s]100%|██████████| 19/19 [00:00<00:00, 717943.93it/s]
+[2026-01-23 10:28:47,060] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 10:28:47,060] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/5 [00:00<?, ?it/s] 20%|██        | 1/5 [00:16<01:04, 16.22s/it] 40%|████      | 2/5 [00:32<00:48, 16.27s/it] 60%|██████    | 3/5 [00:48<00:32, 16.26s/it] 80%|████████  | 4/5 [01:05<00:16, 16.26s/it]100%|██████████| 5/5 [01:17<00:00, 14.86s/it]100%|██████████| 5/5 [01:17<00:00, 15.48s/it]
+01/23 10:30:04 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 29/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1603.70 examples/s]
+Map:   0%|          | 0/21 [00:00<?, ? examples/s]Map: 100%|██████████| 21/21 [00:00<00:00, 5287.26 examples/s]
+Map:   0%|          | 0/193 [00:00<?, ? examples/s]Map: 100%|██████████| 193/193 [00:00<00:00, 13010.92 examples/s]
+01/23 10:30:04 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-middle_school_politics]
+  0%|          | 0/21 [00:00<?, ?it/s]100%|██████████| 21/21 [00:00<00:00, 800730.76it/s]
+[2026-01-23 10:30:04,565] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 10:30:04,565] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/6 [00:00<?, ?it/s] 17%|█▋        | 1/6 [00:16<01:23, 16.64s/it] 33%|███▎      | 2/6 [00:33<01:06, 16.63s/it] 50%|█████     | 3/6 [00:49<00:49, 16.66s/it] 67%|██████▋   | 4/6 [01:06<00:33, 16.68s/it] 83%|████████▎ | 5/6 [01:23<00:16, 16.63s/it]100%|██████████| 6/6 [01:27<00:00, 12.41s/it]100%|██████████| 6/6 [01:27<00:00, 14.57s/it]
+01/23 10:31:31 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 30/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1674.51 examples/s]
+Map:   0%|          | 0/12 [00:00<?, ? examples/s]Map: 100%|██████████| 12/12 [00:00<00:00, 3918.99 examples/s]
+Map:   0%|          | 0/108 [00:00<?, ? examples/s]Map: 100%|██████████| 108/108 [00:00<00:00, 11588.85 examples/s]
+01/23 10:31:32 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-middle_school_geography]
+  0%|          | 0/12 [00:00<?, ?it/s]100%|██████████| 12/12 [00:00<00:00, 498333.15it/s]
+[2026-01-23 10:31:32,066] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 10:31:32,066] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [00:16<00:32, 16.45s/it] 67%|██████▋   | 2/3 [00:32<00:16, 16.48s/it]100%|██████████| 3/3 [00:49<00:00, 16.45s/it]100%|██████████| 3/3 [00:49<00:00, 16.45s/it]
+01/23 10:32:21 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 31/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1645.08 examples/s]
+Map:   0%|          | 0/23 [00:00<?, ? examples/s]Map: 100%|██████████| 23/23 [00:00<00:00, 5619.44 examples/s]
+Map:   0%|          | 0/212 [00:00<?, ? examples/s]Map: 100%|██████████| 212/212 [00:00<00:00, 13088.49 examples/s]
+01/23 10:32:21 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-modern_chinese_history]
+  0%|          | 0/23 [00:00<?, ?it/s]100%|██████████| 23/23 [00:00<00:00, 797264.40it/s]
+[2026-01-23 10:32:21,521] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 10:32:21,521] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/6 [00:00<?, ?it/s] 17%|█▋        | 1/6 [00:16<01:23, 16.62s/it] 33%|███▎      | 2/6 [00:33<01:06, 16.57s/it] 50%|█████     | 3/6 [00:49<00:49, 16.46s/it] 67%|██████▋   | 4/6 [01:05<00:32, 16.45s/it] 83%|████████▎ | 5/6 [01:22<00:16, 16.46s/it]100%|██████████| 6/6 [01:34<00:00, 15.06s/it]100%|██████████| 6/6 [01:34<00:00, 15.79s/it]
+01/23 10:33:56 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 32/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1090.45 examples/s]
+Map:   0%|          | 0/19 [00:00<?, ? examples/s]Map: 100%|██████████| 19/19 [00:00<00:00, 4843.01 examples/s]
+Map:   0%|          | 0/172 [00:00<?, ? examples/s]Map: 100%|██████████| 172/172 [00:00<00:00, 12797.04 examples/s]
+01/23 10:33:56 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-ideological_and_moral_cultivation]
+  0%|          | 0/19 [00:00<?, ?it/s]100%|██████████| 19/19 [00:00<00:00, 711533.71it/s]
+[2026-01-23 10:33:56,376] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 10:33:56,376] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/5 [00:00<?, ?it/s] 20%|██        | 1/5 [00:16<01:05, 16.35s/it] 40%|████      | 2/5 [00:32<00:48, 16.24s/it] 60%|██████    | 3/5 [00:48<00:32, 16.25s/it] 80%|████████  | 4/5 [01:05<00:16, 16.32s/it]100%|██████████| 5/5 [01:17<00:00, 14.81s/it]100%|██████████| 5/5 [01:17<00:00, 15.47s/it]
+01/23 10:35:13 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 33/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1370.69 examples/s]
+Map:   0%|          | 0/22 [00:00<?, ? examples/s]Map: 100%|██████████| 22/22 [00:00<00:00, 5472.02 examples/s]
+Map:   0%|          | 0/204 [00:00<?, ? examples/s]Map: 100%|██████████| 204/204 [00:00<00:00, 13057.20 examples/s]
+01/23 10:35:13 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-logic]
+  0%|          | 0/22 [00:00<?, ?it/s]100%|██████████| 22/22 [00:00<00:00, 781988.88it/s]
+[2026-01-23 10:35:13,827] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 10:35:13,827] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/6 [00:00<?, ?it/s] 17%|█▋        | 1/6 [00:17<01:27, 17.40s/it] 33%|███▎      | 2/6 [00:34<01:09, 17.34s/it] 50%|█████     | 3/6 [00:52<00:52, 17.38s/it] 67%|██████▋   | 4/6 [01:09<00:34, 17.33s/it] 83%|████████▎ | 5/6 [01:26<00:17, 17.41s/it]100%|██████████| 6/6 [01:35<00:00, 14.47s/it]100%|██████████| 6/6 [01:35<00:00, 15.95s/it]
+01/23 10:36:49 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 34/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1619.05 examples/s]
+Map:   0%|          | 0/24 [00:00<?, ? examples/s]Map: 100%|██████████| 24/24 [00:00<00:00, 5986.87 examples/s]
+Map:   0%|          | 0/221 [00:00<?, ? examples/s]Map: 100%|██████████| 221/221 [00:00<00:00, 13523.89 examples/s]
+01/23 10:36:49 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-law]
+  0%|          | 0/24 [00:00<?, ?it/s]100%|██████████| 24/24 [00:00<00:00, 906876.54it/s]
+[2026-01-23 10:36:49,614] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 10:36:49,614] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/6 [00:00<?, ?it/s] 17%|█▋        | 1/6 [00:16<01:24, 16.86s/it] 33%|███▎      | 2/6 [00:33<01:07, 16.76s/it] 50%|█████     | 3/6 [00:50<00:50, 16.76s/it] 67%|██████▋   | 4/6 [01:07<00:33, 16.75s/it] 83%|████████▎ | 5/6 [01:23<00:16, 16.73s/it]100%|██████████| 6/6 [01:40<00:00, 16.71s/it]100%|██████████| 6/6 [01:40<00:00, 16.73s/it]
+01/23 10:38:30 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 35/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1612.45 examples/s]
+Map:   0%|          | 0/23 [00:00<?, ? examples/s]Map: 100%|██████████| 23/23 [00:00<00:00, 5689.71 examples/s]
+Map:   0%|          | 0/209 [00:00<?, ? examples/s]Map: 100%|██████████| 209/209 [00:00<00:00, 13196.39 examples/s]
+01/23 10:38:30 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-chinese_language_and_literature]
+  0%|          | 0/23 [00:00<?, ?it/s]100%|██████████| 23/23 [00:00<00:00, 876990.84it/s]
+[2026-01-23 10:38:30,120] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 10:38:30,120] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/6 [00:00<?, ?it/s] 17%|█▋        | 1/6 [00:16<01:21, 16.27s/it] 33%|███▎      | 2/6 [00:32<01:04, 16.20s/it] 50%|█████     | 3/6 [00:48<00:48, 16.19s/it] 67%|██████▋   | 4/6 [01:04<00:32, 16.20s/it] 83%|████████▎ | 5/6 [01:21<00:16, 16.23s/it]100%|██████████| 6/6 [01:33<00:00, 14.85s/it]100%|██████████| 6/6 [01:33<00:00, 15.54s/it]
+01/23 10:40:03 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 36/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1592.01 examples/s]
+Map:   0%|          | 0/33 [00:00<?, ? examples/s]Map: 100%|██████████| 33/33 [00:00<00:00, 6706.66 examples/s]
+Map:   0%|          | 0/298 [00:00<?, ? examples/s]Map: 100%|██████████| 298/298 [00:00<00:00, 13932.39 examples/s]
+01/23 10:40:03 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-art_studies]
+  0%|          | 0/33 [00:00<?, ?it/s]100%|██████████| 33/33 [00:00<00:00, 1056580.40it/s]
+[2026-01-23 10:40:03,507] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 10:40:03,507] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/9 [00:00<?, ?it/s] 11%|█         | 1/9 [00:16<02:09, 16.16s/it] 22%|██▏       | 2/9 [00:32<01:53, 16.26s/it] 33%|███▎      | 3/9 [00:48<01:37, 16.33s/it] 44%|████▍     | 4/9 [01:05<01:22, 16.41s/it] 56%|█████▌    | 5/9 [01:21<01:05, 16.39s/it] 67%|██████▋   | 6/9 [01:38<00:49, 16.34s/it] 78%|███████▊  | 7/9 [01:54<00:32, 16.35s/it] 89%|████████▉ | 8/9 [02:10<00:16, 16.33s/it]100%|██████████| 9/9 [02:14<00:00, 12.51s/it]100%|██████████| 9/9 [02:14<00:00, 14.98s/it]
+01/23 10:42:18 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 37/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1573.61 examples/s]
+Map:   0%|          | 0/29 [00:00<?, ? examples/s]Map: 100%|██████████| 29/29 [00:00<00:00, 6851.89 examples/s]
+Map:   0%|          | 0/266 [00:00<?, ? examples/s]Map: 100%|██████████| 266/266 [00:00<00:00, 13754.70 examples/s]
+01/23 10:42:18 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-professional_tour_guide]
+  0%|          | 0/29 [00:00<?, ?it/s]100%|██████████| 29/29 [00:00<00:00, 1076414.30it/s]
+[2026-01-23 10:42:18,437] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 10:42:18,437] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:16<01:53, 16.26s/it] 25%|██▌       | 2/8 [00:32<01:37, 16.28s/it] 38%|███▊      | 3/8 [00:48<01:20, 16.20s/it] 50%|█████     | 4/8 [01:04<01:04, 16.19s/it] 62%|██████▎   | 5/8 [01:20<00:48, 16.17s/it] 75%|███████▌  | 6/8 [01:37<00:32, 16.20s/it] 88%|████████▊ | 7/8 [01:53<00:16, 16.22s/it]100%|██████████| 8/8 [01:57<00:00, 12.38s/it]100%|██████████| 8/8 [01:57<00:00, 14.71s/it]
+01/23 10:44:16 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 38/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1334.83 examples/s]
+Map:   0%|          | 0/23 [00:00<?, ? examples/s]Map: 100%|██████████| 23/23 [00:00<00:00, 5745.96 examples/s]
+Map:   0%|          | 0/215 [00:00<?, ? examples/s]Map: 100%|██████████| 215/215 [00:00<00:00, 13216.12 examples/s]
+01/23 10:44:16 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-legal_professional]
+  0%|          | 0/23 [00:00<?, ?it/s]100%|██████████| 23/23 [00:00<00:00, 885036.62it/s]
+[2026-01-23 10:44:16,209] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 10:44:16,209] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/6 [00:00<?, ?it/s] 17%|█▋        | 1/6 [00:16<01:24, 16.87s/it] 33%|███▎      | 2/6 [00:34<01:08, 17.02s/it] 50%|█████     | 3/6 [00:51<00:51, 17.06s/it] 67%|██████▋   | 4/6 [01:08<00:34, 17.02s/it] 83%|████████▎ | 5/6 [01:24<00:16, 16.93s/it]100%|██████████| 6/6 [01:37<00:00, 15.48s/it]100%|██████████| 6/6 [01:37<00:00, 16.25s/it]
+01/23 10:45:53 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 39/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1403.53 examples/s]
+Map:   0%|          | 0/19 [00:00<?, ? examples/s]Map: 100%|██████████| 19/19 [00:00<00:00, 4694.10 examples/s]
+Map:   0%|          | 0/178 [00:00<?, ? examples/s]Map: 100%|██████████| 178/178 [00:00<00:00, 12386.54 examples/s]
+01/23 10:45:53 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-high_school_chinese]
+  0%|          | 0/19 [00:00<?, ?it/s]100%|██████████| 19/19 [00:00<00:00, 717943.93it/s]
+[2026-01-23 10:45:53,817] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 10:45:53,817] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/5 [00:00<?, ?it/s] 20%|██        | 1/5 [00:17<01:09, 17.47s/it] 40%|████      | 2/5 [00:34<00:52, 17.37s/it] 60%|██████    | 3/5 [00:52<00:34, 17.37s/it] 80%|████████  | 4/5 [01:09<00:17, 17.36s/it]100%|██████████| 5/5 [01:22<00:00, 15.77s/it]100%|██████████| 5/5 [01:22<00:00, 16.49s/it]
+01/23 10:47:16 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 40/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1625.20 examples/s]
+Map:   0%|          | 0/20 [00:00<?, ? examples/s]Map: 100%|██████████| 20/20 [00:00<00:00, 5064.06 examples/s]
+Map:   0%|          | 0/182 [00:00<?, ? examples/s]Map: 100%|██████████| 182/182 [00:00<00:00, 12638.05 examples/s]
+01/23 10:47:16 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-high_school_history]
+  0%|          | 0/20 [00:00<?, ?it/s]100%|██████████| 20/20 [00:00<00:00, 776722.96it/s]
+[2026-01-23 10:47:16,339] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 10:47:16,340] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/5 [00:00<?, ?it/s] 20%|██        | 1/5 [00:16<01:05, 16.41s/it] 40%|████      | 2/5 [00:32<00:49, 16.37s/it] 60%|██████    | 3/5 [00:49<00:32, 16.34s/it] 80%|████████  | 4/5 [01:05<00:16, 16.29s/it]100%|██████████| 5/5 [01:21<00:00, 16.34s/it]100%|██████████| 5/5 [01:21<00:00, 16.34s/it]
+01/23 10:48:38 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 41/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1596.25 examples/s]
+Map:   0%|          | 0/22 [00:00<?, ? examples/s]Map: 100%|██████████| 22/22 [00:00<00:00, 5411.05 examples/s]
+Map:   0%|          | 0/207 [00:00<?, ? examples/s]Map: 100%|██████████| 207/207 [00:00<00:00, 13259.13 examples/s]
+01/23 10:48:38 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-middle_school_history]
+  0%|          | 0/22 [00:00<?, ?it/s]100%|██████████| 22/22 [00:00<00:00, 816590.16it/s]
+[2026-01-23 10:48:38,137] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 10:48:38,137] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/6 [00:00<?, ?it/s] 17%|█▋        | 1/6 [00:16<01:21, 16.40s/it] 33%|███▎      | 2/6 [00:32<01:05, 16.44s/it] 50%|█████     | 3/6 [00:49<00:49, 16.42s/it] 67%|██████▋   | 4/6 [01:05<00:32, 16.40s/it] 83%|████████▎ | 5/6 [01:22<00:16, 16.41s/it]100%|██████████| 6/6 [01:30<00:00, 13.63s/it]100%|██████████| 6/6 [01:30<00:00, 15.05s/it]
+01/23 10:50:08 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 42/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1630.76 examples/s]
+Map:   0%|          | 0/47 [00:00<?, ? examples/s]Map: 100%|██████████| 47/47 [00:00<00:00, 8563.89 examples/s]
+Map:   0%|          | 0/429 [00:00<?, ? examples/s]Map: 100%|██████████| 429/429 [00:00<00:00, 14233.05 examples/s]
+01/23 10:50:08 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-civil_servant]
+  0%|          | 0/47 [00:00<?, ?it/s]100%|██████████| 47/47 [00:00<00:00, 1173406.48it/s]
+[2026-01-23 10:50:08,572] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 10:50:08,572] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/12 [00:00<?, ?it/s]  8%|▊         | 1/12 [00:16<03:06, 16.99s/it] 17%|█▋        | 2/12 [00:33<02:49, 16.97s/it] 25%|██▌       | 3/12 [00:50<02:32, 16.99s/it] 33%|███▎      | 4/12 [01:07<02:14, 16.87s/it] 42%|████▏     | 5/12 [01:24<01:58, 16.94s/it] 50%|█████     | 6/12 [01:41<01:41, 16.98s/it] 58%|█████▊    | 7/12 [01:58<01:24, 16.95s/it] 67%|██████▋   | 8/12 [02:15<01:07, 16.90s/it] 75%|███████▌  | 9/12 [02:32<00:50, 16.93s/it] 83%|████████▎ | 10/12 [02:49<00:33, 16.90s/it] 92%|█████████▏| 11/12 [03:06<00:16, 16.87s/it]100%|██████████| 12/12 [03:18<00:00, 15.62s/it]100%|██████████| 12/12 [03:18<00:00, 16.57s/it]
+01/23 10:53:27 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 43/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1236.02 examples/s]
+Map:   0%|          | 0/19 [00:00<?, ? examples/s]Map: 100%|██████████| 19/19 [00:00<00:00, 4881.28 examples/s]
+Map:   0%|          | 0/180 [00:00<?, ? examples/s]Map: 100%|██████████| 180/180 [00:00<00:00, 12307.03 examples/s]
+01/23 10:53:27 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-sports_science]
+  0%|          | 0/19 [00:00<?, ?it/s]100%|██████████| 19/19 [00:00<00:00, 744782.95it/s]
+[2026-01-23 10:53:27,515] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 10:53:27,515] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/5 [00:00<?, ?it/s] 20%|██        | 1/5 [00:16<01:04, 16.20s/it] 40%|████      | 2/5 [00:32<00:48, 16.17s/it] 60%|██████    | 3/5 [00:48<00:32, 16.32s/it] 80%|████████  | 4/5 [01:05<00:16, 16.27s/it]100%|██████████| 5/5 [01:17<00:00, 14.78s/it]100%|██████████| 5/5 [01:17<00:00, 15.44s/it]
+01/23 10:54:44 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 44/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1625.20 examples/s]
+Map:   0%|          | 0/22 [00:00<?, ? examples/s]Map: 100%|██████████| 22/22 [00:00<00:00, 5502.69 examples/s]
+Map:   0%|          | 0/199 [00:00<?, ? examples/s]Map: 100%|██████████| 199/199 [00:00<00:00, 12968.71 examples/s]
+01/23 10:54:44 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-plant_protection]
+  0%|          | 0/22 [00:00<?, ?it/s]100%|██████████| 22/22 [00:00<00:00, 862380.26it/s]
+[2026-01-23 10:54:44,804] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 10:54:44,804] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/6 [00:00<?, ?it/s] 17%|█▋        | 1/6 [00:16<01:20, 16.16s/it] 33%|███▎      | 2/6 [00:32<01:04, 16.21s/it] 50%|█████     | 3/6 [00:48<00:48, 16.26s/it] 67%|██████▋   | 4/6 [01:04<00:32, 16.21s/it] 83%|████████▎ | 5/6 [01:21<00:16, 16.28s/it]100%|██████████| 6/6 [01:29<00:00, 13.58s/it]100%|██████████| 6/6 [01:29<00:00, 14.93s/it]
+01/23 10:56:14 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 45/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1027.26 examples/s]
+Map:   0%|          | 0/19 [00:00<?, ? examples/s]Map: 100%|██████████| 19/19 [00:00<00:00, 3540.91 examples/s]
+Map:   0%|          | 0/175 [00:00<?, ? examples/s]Map: 100%|██████████| 175/175 [00:00<00:00, 12710.67 examples/s]
+01/23 10:56:14 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-basic_medicine]
+  0%|          | 0/19 [00:00<?, ?it/s]100%|██████████| 19/19 [00:00<00:00, 724470.69it/s]
+[2026-01-23 10:56:14,494] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 10:56:14,495] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/5 [00:00<?, ?it/s] 20%|██        | 1/5 [00:16<01:05, 16.31s/it] 40%|████      | 2/5 [00:32<00:49, 16.39s/it] 60%|██████    | 3/5 [00:49<00:32, 16.34s/it] 80%|████████  | 4/5 [01:05<00:16, 16.35s/it]100%|██████████| 5/5 [01:17<00:00, 14.93s/it]100%|██████████| 5/5 [01:17<00:00, 15.56s/it]
+01/23 10:57:32 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 46/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1614.93 examples/s]
+Map:   0%|          | 0/22 [00:00<?, ? examples/s]Map: 100%|██████████| 22/22 [00:00<00:00, 5188.34 examples/s]
+Map:   0%|          | 0/200 [00:00<?, ? examples/s]Map: 100%|██████████| 200/200 [00:00<00:00, 12216.18 examples/s]
+01/23 10:57:32 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-clinical_medicine]
+  0%|          | 0/22 [00:00<?, ?it/s]100%|██████████| 22/22 [00:00<00:00, 823881.14it/s]
+[2026-01-23 10:57:32,391] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 10:57:32,391] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/6 [00:00<?, ?it/s] 17%|█▋        | 1/6 [00:16<01:23, 16.68s/it] 33%|███▎      | 2/6 [00:33<01:07, 16.75s/it] 50%|█████     | 3/6 [00:50<00:50, 16.76s/it] 67%|██████▋   | 4/6 [01:06<00:33, 16.65s/it] 83%|████████▎ | 5/6 [01:23<00:16, 16.59s/it]100%|██████████| 6/6 [01:31<00:00, 13.77s/it]100%|██████████| 6/6 [01:31<00:00, 15.25s/it]
+01/23 10:59:03 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 47/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1598.56 examples/s]
+Map:   0%|          | 0/46 [00:00<?, ? examples/s]Map: 100%|██████████| 46/46 [00:00<00:00, 8565.88 examples/s]
+Map:   0%|          | 0/418 [00:00<?, ? examples/s]Map: 100%|██████████| 418/418 [00:00<00:00, 14385.62 examples/s]
+01/23 10:59:03 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-urban_and_rural_planner]
+  0%|          | 0/46 [00:00<?, ?it/s]100%|██████████| 46/46 [00:00<00:00, 1439835.70it/s]
+[2026-01-23 10:59:04,052] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 10:59:04,052] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/12 [00:00<?, ?it/s]  8%|▊         | 1/12 [00:16<03:01, 16.52s/it] 17%|█▋        | 2/12 [00:33<02:45, 16.57s/it] 25%|██▌       | 3/12 [00:49<02:29, 16.58s/it] 33%|███▎      | 4/12 [01:06<02:13, 16.67s/it] 42%|████▏     | 5/12 [01:23<01:56, 16.61s/it] 50%|█████     | 6/12 [01:39<01:39, 16.57s/it] 58%|█████▊    | 7/12 [01:55<01:22, 16.53s/it] 67%|██████▋   | 8/12 [02:12<01:06, 16.50s/it] 75%|███████▌  | 9/12 [02:28<00:49, 16.42s/it] 83%|████████▎ | 10/12 [02:45<00:32, 16.41s/it] 92%|█████████▏| 11/12 [03:01<00:16, 16.40s/it]100%|██████████| 12/12 [03:09<00:00, 13.89s/it]100%|██████████| 12/12 [03:09<00:00, 15.80s/it]
+01/23 11:02:13 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 48/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1609.11 examples/s]
+Map:   0%|          | 0/49 [00:00<?, ? examples/s]Map: 100%|██████████| 49/49 [00:00<00:00, 8353.15 examples/s]
+Map:   0%|          | 0/443 [00:00<?, ? examples/s]Map: 100%|██████████| 443/443 [00:00<00:00, 14430.65 examples/s]
+01/23 11:02:13 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-accountant]
+  0%|          | 0/49 [00:00<?, ?it/s]100%|██████████| 49/49 [00:00<00:00, 1500152.53it/s]
+[2026-01-23 11:02:13,795] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 11:02:13,795] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/13 [00:00<?, ?it/s]  8%|▊         | 1/13 [00:16<03:19, 16.60s/it] 15%|█▌        | 2/13 [00:33<03:02, 16.56s/it] 23%|██▎       | 3/13 [00:49<02:45, 16.51s/it] 31%|███       | 4/13 [01:06<02:28, 16.53s/it] 38%|███▊      | 5/13 [01:22<02:12, 16.51s/it] 46%|████▌     | 6/13 [01:39<01:55, 16.48s/it] 54%|█████▍    | 7/13 [01:55<01:39, 16.52s/it] 62%|██████▏   | 8/13 [02:12<01:22, 16.51s/it] 69%|██████▉   | 9/13 [02:28<01:05, 16.50s/it] 77%|███████▋  | 10/13 [02:45<00:49, 16.48s/it] 85%|████████▍ | 11/13 [03:01<00:32, 16.48s/it] 92%|█████████▏| 12/13 [03:18<00:16, 16.56s/it]100%|██████████| 13/13 [03:22<00:00, 12.80s/it]100%|██████████| 13/13 [03:22<00:00, 15.57s/it]
+01/23 11:05:36 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 49/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1407.96 examples/s]
+Map:   0%|          | 0/31 [00:00<?, ? examples/s]Map: 100%|██████████| 31/31 [00:00<00:00, 7228.34 examples/s]
+Map:   0%|          | 0/282 [00:00<?, ? examples/s]Map: 100%|██████████| 282/282 [00:00<00:00, 13877.99 examples/s]
+01/23 11:05:36 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-fire_engineer]
+  0%|          | 0/31 [00:00<?, ?it/s]100%|██████████| 31/31 [00:00<00:00, 1083528.53it/s]
+[2026-01-23 11:05:36,345] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 11:05:36,345] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:16<01:56, 16.70s/it] 25%|██▌       | 2/8 [00:33<01:39, 16.67s/it] 38%|███▊      | 3/8 [00:49<01:23, 16.64s/it] 50%|█████     | 4/8 [01:06<01:06, 16.67s/it] 62%|██████▎   | 5/8 [01:23<00:49, 16.62s/it] 75%|███████▌  | 6/8 [01:39<00:33, 16.60s/it] 88%|████████▊ | 7/8 [01:56<00:16, 16.60s/it]100%|██████████| 8/8 [02:08<00:00, 15.24s/it]100%|██████████| 8/8 [02:08<00:00, 16.09s/it]
+01/23 11:07:45 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 50/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1693.16 examples/s]
+Map:   0%|          | 0/31 [00:00<?, ? examples/s]Map: 100%|██████████| 31/31 [00:00<00:00, 7118.33 examples/s]
+Map:   0%|          | 0/281 [00:00<?, ? examples/s]Map: 100%|██████████| 281/281 [00:00<00:00, 13764.34 examples/s]
+01/23 11:07:45 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-environmental_impact_assessment_engineer]
+  0%|          | 0/31 [00:00<?, ?it/s]100%|██████████| 31/31 [00:00<00:00, 1101893.42it/s]
+[2026-01-23 11:07:45,151] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 11:07:45,151] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:16<01:55, 16.45s/it] 25%|██▌       | 2/8 [00:32<01:38, 16.45s/it] 38%|███▊      | 3/8 [00:49<01:21, 16.35s/it] 50%|█████     | 4/8 [01:05<01:05, 16.32s/it] 62%|██████▎   | 5/8 [01:21<00:49, 16.38s/it] 75%|███████▌  | 6/8 [01:38<00:32, 16.44s/it] 88%|████████▊ | 7/8 [01:54<00:16, 16.47s/it]100%|██████████| 8/8 [02:07<00:00, 15.11s/it]100%|██████████| 8/8 [02:07<00:00, 15.90s/it]
+01/23 11:09:52 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 51/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1475.41 examples/s]
+Map:   0%|          | 0/49 [00:00<?, ? examples/s]Map: 100%|██████████| 49/49 [00:00<00:00, 8273.79 examples/s]
+Map:   0%|          | 0/443 [00:00<?, ? examples/s]Map: 100%|██████████| 443/443 [00:00<00:00, 14253.75 examples/s]
+01/23 11:09:52 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-tax_accountant]
+  0%|          | 0/49 [00:00<?, ?it/s]100%|██████████| 49/49 [00:00<00:00, 1437209.06it/s]
+[2026-01-23 11:09:52,502] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 11:09:52,502] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/13 [00:00<?, ?it/s]  8%|▊         | 1/13 [00:16<03:21, 16.77s/it] 15%|█▌        | 2/13 [00:33<03:03, 16.66s/it] 23%|██▎       | 3/13 [00:49<02:45, 16.58s/it] 31%|███       | 4/13 [01:06<02:28, 16.54s/it] 38%|███▊      | 5/13 [01:22<02:12, 16.55s/it] 46%|████▌     | 6/13 [01:39<01:56, 16.59s/it] 54%|█████▍    | 7/13 [01:56<01:39, 16.61s/it] 62%|██████▏   | 8/13 [02:12<01:23, 16.62s/it] 69%|██████▉   | 9/13 [02:29<01:06, 16.59s/it] 77%|███████▋  | 10/13 [02:45<00:49, 16.56s/it] 85%|████████▍ | 11/13 [03:02<00:33, 16.53s/it] 92%|█████████▏| 12/13 [03:18<00:16, 16.49s/it]100%|██████████| 13/13 [03:22<00:00, 12.75s/it]100%|██████████| 13/13 [03:22<00:00, 15.60s/it]
+01/23 11:13:15 - OpenCompass - INFO - The Progress of This Task --> Models: 1/1, Datasets: 52/52
+Map:   0%|          | 0/5 [00:00<?, ? examples/s]Map: 100%|██████████| 5/5 [00:00<00:00, 1619.17 examples/s]
+Map:   0%|          | 0/49 [00:00<?, ? examples/s]Map: 100%|██████████| 49/49 [00:00<00:00, 8378.35 examples/s]
+Map:   0%|          | 0/443 [00:00<?, ? examples/s]Map: 100%|██████████| 443/443 [00:00<00:00, 14522.92 examples/s]
+01/23 11:13:15 - OpenCompass - INFO - Start inferencing [qwen3-32b-hf/ceval-physician]
+  0%|          | 0/49 [00:00<?, ?it/s]100%|██████████| 49/49 [00:00<00:00, 1511183.06it/s]
+[2026-01-23 11:13:15,509] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting build dataloader
+[2026-01-23 11:13:15,509] [opencompass.openicl.icl_inferencer.icl_gen_inferencer] [INFO] Starting inference process...
+  0%|          | 0/13 [00:00<?, ?it/s]  8%|▊         | 1/13 [00:16<03:13, 16.12s/it] 15%|█▌        | 2/13 [00:32<02:57, 16.10s/it] 23%|██▎       | 3/13 [00:48<02:41, 16.12s/it] 31%|███       | 4/13 [01:04<02:25, 16.13s/it] 38%|███▊      | 5/13 [01:20<02:09, 16.14s/it] 46%|████▌     | 6/13 [01:36<01:52, 16.09s/it] 54%|█████▍    | 7/13 [01:52<01:36, 16.10s/it] 62%|██████▏   | 8/13 [02:08<01:20, 16.11s/it] 69%|██████▉   | 9/13 [02:25<01:05, 16.25s/it] 77%|███████▋  | 10/13 [02:41<00:48, 16.31s/it] 85%|████████▍ | 11/13 [02:57<00:32, 16.24s/it] 92%|█████████▏| 12/13 [03:14<00:16, 16.29s/it]100%|██████████| 13/13 [03:18<00:00, 12.62s/it]100%|██████████| 13/13 [03:18<00:00, 15.27s/it]
+01/23 11:16:34 - OpenCompass - INFO - time elapsed: 5588.01s

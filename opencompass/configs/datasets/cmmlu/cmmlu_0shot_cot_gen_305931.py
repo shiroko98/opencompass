@@ -5,6 +5,10 @@ from opencompass.openicl.icl_evaluator import AccEvaluator
 from opencompass.datasets import CMMLUDataset
 from opencompass.utils.text_postprocessors import match_answer_pattern
 
+
+# =========================
+# CMMLU 学科映射
+# =========================
 cmmlu_subject_mapping = {
     'agronomy': '农学',
     'anatomy': '解剖学',
@@ -75,9 +79,16 @@ cmmlu_subject_mapping = {
     'world_religions': '世界宗教'
 }
 
-QUERY_TEMPLATE = """
-你回答的最后一行**必须**是以下格式 '答案: $选项' (不带引号), 其中选项是ABCD之一. 请在回答之前一步步思考.
 
+# =========================
+# 🚨 方案 A 核心：极简安全 Prompt
+# =========================
+QUERY_TEMPLATE = r"""
+请回答以下单项选择题。
+
+你可以在心里思考，但最终**只输出一个大写字母（A/B/C/D）**作为答案。
+不要输出“答案是”、不要输出解释。
+请在最后一行单独输出选项字母（A/B/C/D），不要输出其它内容。
 {question}
 
 A) {A}
@@ -86,32 +97,50 @@ C) {C}
 D) {D}
 """.strip()
 
+
+
 cmmlu_all_sets = list(cmmlu_subject_mapping.keys())
+#cmmlu_all_sets = ['journalism']
 
 cmmlu_datasets = []
+
 for _name in cmmlu_all_sets:
     _ch_name = cmmlu_subject_mapping[_name]
-    prompt_prefix = f'请回答以下关于{_ch_name}的单项选择题, '
+    prompt_prefix = f'请回答以下关于{_ch_name}的单项选择题。\n\n'
+
     cmmlu_infer_cfg = dict(
         prompt_template=dict(
             type=PromptTemplate,
             template=dict(
                 round=[
-                    dict(role='HUMAN', prompt=prompt_prefix+QUERY_TEMPLATE),
+                    dict(
+                        role='HUMAN',
+                        prompt=prompt_prefix + QUERY_TEMPLATE
+                    ),
                 ],
             ),
         ),
         retriever=dict(type=ZeroRetriever),
-        inferencer=dict(type=GenInferencer),
+        inferencer=dict(
+            type=GenInferencer,
+            max_out_len=64,            # 给足空间让它走到答案
+            temperature=0.0,
+            top_p=1.0,
+            stop_words=['</think>'],   # ⭐ 只在思考结束时停
+        ),
+
     )
+
+
     cmmlu_eval_cfg = dict(
         evaluator=dict(type=AccEvaluator),
         pred_postprocessor=dict(
             type=match_answer_pattern,
-            # answer_pattern=r'(?i)答案\s*:\s*([A-D])'
-            answer_pattern=r'(?i)答案\s*:\s*[\W]*([A-D])[\W]*',
-        )
+            # 专门为中文场景设计，不用 \b
+            answer_pattern=r'(?i)(?:答案|选项|选择|为|是)?\s*[:：]?\s*([A-D])',
+        ),
     )
+
     cmmlu_datasets.append(
         dict(
             type=CMMLUDataset,
@@ -122,9 +151,11 @@ for _name in cmmlu_all_sets:
                 input_columns=['question', 'A', 'B', 'C', 'D'],
                 output_column='answer',
                 train_split='dev',
-                test_split='test'),
+                test_split='test',
+            ),
             infer_cfg=cmmlu_infer_cfg,
             eval_cfg=cmmlu_eval_cfg,
-        ))
+        )
+    )
 
 del _name, _ch_name

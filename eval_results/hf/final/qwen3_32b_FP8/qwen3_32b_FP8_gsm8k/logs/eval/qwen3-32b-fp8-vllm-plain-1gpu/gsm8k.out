@@ -1,0 +1,8 @@
+/root/miniforge3/envs/open-compass/lib/python3.10/site-packages/jieba/_compat.py:18: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+Map:   0%|          | 0/7473 [00:00<?, ? examples/s]Map:  38%|███▊      | 2863/7473 [00:00<00:00, 28432.90 examples/s]Map:  77%|███████▋  | 5749/7473 [00:00<00:00, 28680.75 examples/s]Map: 100%|██████████| 7473/7473 [00:00<00:00, 28107.59 examples/s]
+Map:   0%|          | 0/1319 [00:00<?, ? examples/s]Map: 100%|██████████| 1319/1319 [00:00<00:00, 27297.69 examples/s]
+Parameter 'function'=<function OpenICLEvalTask._load_and_preprocess_test_data.<locals>.postprocess at 0x7fea46253b50> of the transform datasets.arrow_dataset.Dataset._map_single couldn't be hashed properly, a random hash was used instead. Make sure your transforms and parameters are serializable with pickle or dill for the dataset fingerprinting and caching to work. If you reuse this transform, the caching mechanism will consider it to be different from the previous calls and recompute everything. This warning is only showed once. Subsequent hashing failures won't be showed.
+Map:   0%|          | 0/1319 [00:00<?, ? examples/s]Map: 100%|██████████| 1319/1319 [00:00<00:00, 24187.19 examples/s]
+01/27 04:38:45 - OpenCompass - INFO - Running 0-th replica of evaluation
+01/27 04:38:45 - OpenCompass - INFO - time elapsed:  8.12s

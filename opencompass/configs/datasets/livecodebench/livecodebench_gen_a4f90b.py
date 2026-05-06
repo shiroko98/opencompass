@@ -12,6 +12,7 @@ from opencompass.datasets import (
 from opencompass.datasets.livecodebench import TestOutputPromptConstants
 
 
+
 lcb_code_generation_reader_cfg = dict(
     input_columns=[
         'question_content',
@@ -23,8 +24,21 @@ lcb_code_generation_reader_cfg = dict(
 
 SYSTEM_MESSAGE_GENERIC = f'You are an expert Python programmer. You will be given a question (problem specification) and will generate a correct Python program that matches the specification and passes all tests. You will NOT return anything except for the program.'
 
-prompt_template = '### Question:\n{question_content}\n\n{format_prompt}' + \
-                    '### Answer: (use the provided format with backticks)\n\n'
+prompt_template = (
+    "You are a competitive programming AI.\n"
+    "Your task is to write a COMPLETE Python program.\n"
+    "The program MUST read from stdin and write to stdout.\n"
+    "Do NOT explain.\n"
+    "Do NOT output text.\n"
+    "Only output ONE Python code block.\n\n"
+    "### Problem:\n"
+    "{question_content}\n\n"
+    "{format_prompt}\n\n"
+    "### Answer:\n"
+    "```python\n"
+)
+
+
 
 
 # Code Generation Tasks
@@ -32,10 +46,29 @@ lcb_code_generation_infer_cfg = dict(
     prompt_template=dict(
         type=PromptTemplate,
         template=dict(
+            begin=[
+                dict(
+                    role='SYSTEM',
+                    prompt=(
+                        "You are a competitive programming AI.\n"
+                        "Output ONLY valid Python code.\n"
+                        "Do NOT explain.\n"
+                        "Do NOT add text.\n"
+                        "The code must read from stdin and write to stdout."
+                    )
+                )
+            ],
             round=[
                 dict(
                     role='HUMAN',
-                    prompt=prompt_template
+                    prompt=(
+                        "{question_content}\n\n"
+                        "{format_prompt}\n\n"
+                        "IMPORTANT:\n"
+                        "Only output one Python code block.\n"
+                        "Do NOT output anything else.\n"
+                        "```python\n"
+                    )
                 )
             ]
         )
@@ -43,6 +76,7 @@ lcb_code_generation_infer_cfg = dict(
     retriever=dict(type=ZeroRetriever),
     inferencer=dict(type=GenInferencer)
 )
+
 
 lcb_code_generation_eval_cfg = dict(
     evaluator=dict(
@@ -59,7 +93,7 @@ LCBCodeGeneration_dataset = dict(
     path='opencompass/code_generation_lite',
     reader_cfg=lcb_code_generation_reader_cfg,
     infer_cfg=lcb_code_generation_infer_cfg,
-    eval_cfg=lcb_code_generation_eval_cfg
+    eval_cfg=lcb_code_generation_eval_cfg,
 )
 
 # Code Execution Dataset

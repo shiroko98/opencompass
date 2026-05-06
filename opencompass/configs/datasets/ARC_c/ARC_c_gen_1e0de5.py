@@ -17,9 +17,16 @@ ARC_c_infer_cfg = dict(
                 dict(
                     role='HUMAN',
                     prompt=
-                    'Question: {question}\nA. {textA}\nB. {textB}\nC. {textC}\nD. {textD}\nAnswer:'
+                    'Question: {question}\n'
+                    'A. {textA}\n'
+                    'B. {textB}\n'
+                    'C. {textC}\n'
+                    'D. {textD}\n'
+                    'You must answer with ONLY ONE LETTER among A, B, C, D.\n'
+                    'Answer:'
                 )
-            ], ),
+            ],
+        ),
     ),
     retriever=dict(type=ZeroRetriever),
     inferencer=dict(type=GenInferencer),

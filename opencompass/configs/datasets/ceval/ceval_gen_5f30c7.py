@@ -60,7 +60,10 @@ ceval_subject_mapping = {
     'tax_accountant': ['Tax Accountant', '税务师', 'Other'],
     'physician': ['Physician', '医师资格', 'Other'],
 }
-ceval_all_sets = list(ceval_subject_mapping.keys())
+#ceval_all_sets = list(ceval_subject_mapping.keys())
+ceval_all_sets = [
+    'computer_network',
+]
 
 ceval_datasets = []
 for _split in ['val']:

@@ -1,0 +1,6 @@
+/root/miniforge3/envs/open-compass/lib/python3.10/site-packages/jieba/_compat.py:18: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+Map:   0%|          | 0/25 [00:00<?, ? examples/s]Map: 100%|██████████| 25/25 [00:00<00:00, 5481.89 examples/s]
+Map:   0%|          | 0/10042 [00:00<?, ? examples/s]Map:  19%|█▉        | 1920/10042 [00:00<00:00, 19095.26 examples/s]Map:  39%|███▊      | 3872/10042 [00:00<00:00, 19269.11 examples/s]Map:  67%|██████▋   | 6751/10042 [00:00<00:00, 19196.85 examples/s]Map:  87%|████████▋ | 8688/10042 [00:00<00:00, 19245.97 examples/s]Map: 100%|██████████| 10042/10042 [00:00<00:00, 18995.33 examples/s]
+01/22 22:15:36 - OpenCompass - INFO - Running 0-th replica of evaluation
+01/22 22:15:38 - OpenCompass - INFO - time elapsed:  14.20s

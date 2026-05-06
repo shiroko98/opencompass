@@ -36,5 +36,7 @@ gsm8k_datasets = [
         path='opencompass/gsm8k',
         reader_cfg=gsm8k_reader_cfg,
         infer_cfg=gsm8k_infer_cfg,
-        eval_cfg=gsm8k_eval_cfg)
+        eval_cfg=gsm8k_eval_cfg,
+
+        )
 ]

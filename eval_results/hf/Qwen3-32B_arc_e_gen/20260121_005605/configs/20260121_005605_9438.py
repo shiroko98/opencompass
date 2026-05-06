@@ -1,0 +1,61 @@
+datasets=[
+    dict(abbr='ARC-e',
+        eval_cfg=dict(
+            evaluator=dict(
+                type='opencompass.openicl.icl_evaluator.AccEvaluator'),
+            pred_postprocessor=dict(
+                options='ABCD',
+                type='opencompass.utils.text_postprocessors.first_option_postprocess'),
+            pred_role='BOT'),
+        infer_cfg=dict(
+            inferencer=dict(
+                type='opencompass.openicl.icl_inferencer.GenInferencer'),
+            prompt_template=dict(
+                template=dict(
+                    round=[
+                        dict(prompt='Question: {question}\nA. {textA}\nB. {textB}\nC. {textC}\nD. {textD}\nAnswer:',
+                            role='HUMAN'),
+                        ]),
+                type='opencompass.openicl.icl_prompt_template.PromptTemplate'),
+            retriever=dict(
+                type='opencompass.openicl.icl_retriever.ZeroRetriever')),
+        name='ARC-Easy',
+        path='opencompass/ai2_arc-easy-dev',
+        reader_cfg=dict(
+            input_columns=[
+                'question',
+                'textA',
+                'textB',
+                'textC',
+                'textD',
+                ],
+            output_column='answerKey'),
+        type='opencompass.datasets.ARCDataset'),
+    ]
+models=[
+    dict(abbr='Qwen3-32B_hf',
+        batch_size=8,
+        generation_kwargs=dict(
+            ),
+        max_out_len=256,
+        max_seq_len=None,
+        model_kwargs=dict(
+            ),
+        pad_token_id=None,
+        path='/mnt/lab/Models/qwen/Qwen3-32B',
+        peft_kwargs=dict(
+            ),
+        peft_path=None,
+        run_cfg=dict(
+            num_gpus=1),
+        stop_words=[
+            ],
+        tokenizer_kwargs=dict(
+            ),
+        tokenizer_path=None,
+        type='opencompass.models.huggingface_above_v4_33.HuggingFacewithChatTemplate'),
+    ]
+summarizer=dict(
+    summary_groups=[
+        ])
+work_dir='eval_results/hf/Qwen3-32B_arc_e_gen/20260121_005605'
